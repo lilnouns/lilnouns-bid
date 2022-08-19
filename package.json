@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preexport": "npm run build",
+    "export": "next export"
   },
   "dependencies": {
     "next": "12.2.5",
