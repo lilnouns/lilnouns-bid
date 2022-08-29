@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.0-alpha.2] - 2022-08-19
+## [1.0.0-alpha.3] - 2022-08-29
+
+### <!-- 04 -->Refactor
+
+- Add some text to the main index
+
+## [1.0.0-alpha.2] - 2022-08-29
 
 ### <!-- 05 -->Documentation
 
