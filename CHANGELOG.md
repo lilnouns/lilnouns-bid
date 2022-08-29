@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.2] - 2022-08-19
+
+### <!-- 05 -->Documentation
+
+- Cleanup the project readme file
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Replace default favicon by a nouns favicon
+
+## [1.0.0-alpha.1] - 2022-08-19
+
+### <!-- 07 -->Continuous Integrations
+
+- Replace `yarn` by `pnpm` over `build` workflow
+
 ## [1.0.0-alpha.0] - 2022-08-19
 
 ### <!-- 04 -->Refactor
