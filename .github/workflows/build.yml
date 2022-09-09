@@ -52,7 +52,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --no-frozen-lockfile --strict-peer-dependencies
 
       - run: pnpm run build
         name: Build the Next app
