@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.6] - 2022-09-09
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Update some of npm configs through npmrc file
+
+## [1.0.0-alpha.5] - 2022-09-09
+
+### <!-- 07 -->Continuous Integrations
+
+- Solve pnpm to fail on peer dependency issues on `build` workflow
+
 ## [1.0.0-alpha.4] - 2022-09-09
 
 ### <!-- 07 -->Continuous Integrations
