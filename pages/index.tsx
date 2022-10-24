@@ -1,10 +1,11 @@
-import Head from 'next/head'
+import type { NextPage } from "next";
+import Head from "next/head";
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Lil Nouns Bid</title>
+        <title>Lil Nouns</title>
         <meta name="description" content="Simple interface to bit and see last auctions" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -16,5 +17,7 @@ export default function Home() {
         </div>
       </main>
     </>
-  )
-}
+  );
+};
+
+export default Home;
