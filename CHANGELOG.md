@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.8] - 2022-10-24
+
+### <!-- 04 -->Refactor
+
+- Add a middleware to the page functions to proxy main api requests
+- Migrate to typescript and update based on template
+
+### <!-- 07 -->Continuous Integrations
+
+- Bump actions/checkout from 3.0.2 to 3.1.0
+- Bump actions/cache from 3.0.8 to 3.0.11
+- Bump actions/setup-node from 3.4.1 to 3.5.1
+- Bump pnpm/action-setup from 2.2.2 to 2.2.4
+- Add node version `18` to the `build` workflow
+- Add missing environmental variables for `build` workflow
+- Patch `set-output` on `build` workflow
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump eslint from 8.23.1 to 8.26.0
+- Update `pnpm` lockfile state
+- Update ignored files over project root
+
 ## [1.0.0-alpha.7] - 2022-09-21
 
 ### <!-- 07 -->Continuous Integrations
