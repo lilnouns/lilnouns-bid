@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.9] - 2022-10-26
+
+### <!-- 01 -->Features
+
+- Improve index by adding base structure and components
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump @types/node from 18.11.4 to 18.11.5
+- Bump @types/react-dom from 18.0.6 to 18.0.7
+- Bump @types/react from 18.0.21 to 18.0.23
+- Update `pnpm` lockfile state
+- Add `@heroicons/react:2.0.12` to dependencies
+- Add `@headlessui/react:1.7.3` to dependencies
+
 ## [1.0.0-alpha.8] - 2022-10-24
 
 ### <!-- 04 -->Refactor

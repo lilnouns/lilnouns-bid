@@ -17,7 +17,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
           />
         </Head>
-        <body className="bg-neutral-100">
+        <body className="bg-gray-50">
         <Main/>
         <NextScript/>
         </body>
