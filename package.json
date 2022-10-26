@@ -13,6 +13,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.3",
     "@heroicons/react": "^2.0.12",
     "autoprefixer": "^10.4.9",
     "next": "12.3.1",
