@@ -9,6 +9,7 @@ specifiers:
   autoprefixer: ^10.4.9
   eslint: 8.26.0
   eslint-config-next: 13.0.0
+  ethers: ^5.7.2
   next: 13.0.0
   next-seo: ^5.5.0
   next-sitemap: ^3.1.22
@@ -24,6 +25,7 @@ dependencies:
   '@headlessui/react': 1.7.3_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': 2.0.12_react@18.2.0
   autoprefixer: 10.4.12_postcss@8.4.16
+  ethers: 5.7.2
   next: 13.0.0_qtpcxnaaarbm4ws7ughq6oxfve
   next-seo: 5.8.0_r5sq4deac3rmm2d5onhwvomqve
   next-sitemap: 3.1.29_qcnuwogvzn5dnsttittida2hji
@@ -7435,6 +7437,7 @@ packages:
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+    dev: true
 
   /react-is/17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
@@ -7526,7 +7529,7 @@ packages:
     dependencies:
       object-assign: 4.1.1
       react: 18.2.0
-      react-is: 16.13.1
+      react-is: 17.0.2
     dev: false
 
   /react/18.2.0:
