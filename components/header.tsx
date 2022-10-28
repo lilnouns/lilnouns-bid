@@ -1,6 +1,8 @@
 import {Fragment} from 'react'
 import {Popover, Transition} from '@headlessui/react'
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
+import LoginButton from "./login-button";
+import LoginMenu from "./login-menu";
 
 const navigation = [
   {name: 'Home', href: '/'},
@@ -39,14 +41,7 @@ export default function Header() {
             ))}
           </div>
           <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-                <span className="inline-flex rounded-md shadow">
-                  <a
-                    href="#"
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-neutral-600 bg-white hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
-                </span>
+            <LoginButton />
           </div>
         </nav>
       </div>
@@ -92,12 +87,7 @@ export default function Header() {
                 </a>
               ))}
             </div>
-            <a
-              href="#"
-              className="block w-full px-5 py-3 text-center font-medium text-neutral-600 bg-gray-50 hover:bg-gray-100"
-            >
-              Log in
-            </a>
+            <LoginMenu />
           </div>
         </Popover.Panel>
       </Transition>
