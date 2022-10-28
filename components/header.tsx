@@ -1,10 +1,12 @@
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import {Fragment} from 'react'
+import {Popover, Transition} from '@headlessui/react'
+import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
+import LoginButton from "./login-button";
+import LoginMenu from "./login-menu";
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Discord', href: 'https://discord.com/channels/954142017556979752/1011648759630930010' },
+  {name: 'Home', href: '/'},
+  {name: 'Discord', href: 'https://discord.com/channels/954142017556979752/1011648759630930010'},
 ]
 
 export default function Header() {
@@ -23,9 +25,10 @@ export default function Header() {
                     />*/}
               </a>
               <div className="-mr-2 flex items-center md:hidden">
-                <Popover.Button className="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-neutral-500">
+                <Popover.Button
+                  className="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-neutral-500">
                   <span className="sr-only">Open main menu</span>
-                  <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                  <Bars3Icon className="h-6 w-6" aria-hidden="true"/>
                 </Popover.Button>
               </div>
             </div>
@@ -37,16 +40,9 @@ export default function Header() {
               </a>
             ))}
           </div>
-          {/*<div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-                <span className="inline-flex rounded-md shadow">
-                  <a
-                    href="#"
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-neutral-600 bg-white hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
-                </span>
-              </div>*/}
+          <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+            <LoginButton />
+          </div>
         </nav>
       </div>
 
@@ -73,9 +69,10 @@ export default function Header() {
                     />
                   </div>*/}
               <div className="-mr-2">
-                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-neutral-500">
+                <Popover.Button
+                  className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-neutral-500">
                   <span className="sr-only">Close menu</span>
-                  <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                  <XMarkIcon className="h-6 w-6" aria-hidden="true"/>
                 </Popover.Button>
               </div>
             </div>
@@ -90,12 +87,7 @@ export default function Header() {
                 </a>
               ))}
             </div>
-            {/*<a
-                  href="#"
-                  className="block w-full px-5 py-3 text-center font-medium text-neutral-600 bg-gray-50 hover:bg-gray-100"
-                >
-                  Log in
-                </a>*/}
+            <LoginMenu />
           </div>
         </Popover.Panel>
       </Transition>
