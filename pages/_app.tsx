@@ -10,12 +10,12 @@ import {infuraProvider} from 'wagmi/providers/infura'
 import {getDefaultWallets, RainbowKitProvider} from "@rainbow-me/rainbowkit";
 
 const {chains, provider} = configureChains(defaultChains, [
-  alchemyProvider({
-    apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
-    priority: 0,
-  }),
   infuraProvider({
     apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY,
+    priority: 0,
+  }),
+  alchemyProvider({
+    apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
     priority: 1,
   }),
   publicProvider({priority: 2}),
