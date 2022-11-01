@@ -1,4 +1,5 @@
 import {Hero} from "./content/hero";
+import {Auction} from "./auction";
 
 export default function Content() {
   return (
@@ -6,7 +7,7 @@ export default function Content() {
       <Hero/>
 
       <section>
-
+        <Auction />
       </section>
     </main>
   )
