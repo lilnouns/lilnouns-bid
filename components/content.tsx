@@ -1,5 +1,5 @@
 import {Hero} from "./content/hero";
-import {Auction} from "./auction";
+import Auction from "./auction";
 
 export default function Content() {
   return (
