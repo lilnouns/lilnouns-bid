@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {Auction, LilNoun} from "../hooks";
 import {useIdle} from "react-use";
 
@@ -7,7 +7,7 @@ type Props = {
   lilNoun: LilNoun;
 };
 
-export default function Panel({auction, lilNoun}: Props) {
+const Panel = ({auction, lilNoun}: Props) => {
   const isIdle = useIdle(60e3);
 
   useEffect(() => {
@@ -23,4 +23,6 @@ export default function Panel({auction, lilNoun}: Props) {
       {/*End: {auction.endTime.toNumber()}<br/>*/}
     </div>
   );
-}
+};
+
+export default Panel

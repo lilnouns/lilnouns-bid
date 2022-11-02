@@ -1,6 +1,8 @@
 import {ConnectButton} from "@rainbow-me/rainbowkit";
 
-export default function LoginMenu() {
+type Props = {};
+
+const LoginMenu = ({}: Props) => {
   return (
     <>
       <ConnectButton.Custom>
@@ -39,51 +41,51 @@ export default function LoginMenu() {
                 if (!connected) {
                   return (
                     <span onClick={openConnectModal}>
-                      Log in
-                    </span>
+                        Log in
+                      </span>
                   );
                 }
 
                 if (chain.unsupported) {
                   return (
                     <span onClick={openChainModal}>
-                      Wrong network
-                    </span>
+                        Wrong network
+                      </span>
                   );
                 }
 
                 return (
                   <>
                     {/*<span onClick={openChainModal}>
-                      {chain.hasIcon && (
-                        <div
-                          style={{
-                            background: chain.iconBackground,
-                            width: 12,
-                            height: 12,
-                            borderRadius: 999,
-                            overflow: 'hidden',
-                            marginRight: 4,
-                          }}
-                        >
-                          {chain.iconUrl && (
-                            <img
-                              alt={chain.name ?? 'Chain icon'}
-                              src={chain.iconUrl}
-                              style={{width: 12, height: 12}}
-                            />
-                          )}
-                        </div>
-                      )}
-                      {chain.name}
-                    </span>*/}
+                        {chain.hasIcon && (
+                          <div
+                            style={{
+                              background: chain.iconBackground,
+                              width: 12,
+                              height: 12,
+                              borderRadius: 999,
+                              overflow: 'hidden',
+                              marginRight: 4,
+                            }}
+                          >
+                            {chain.iconUrl && (
+                              <img
+                                alt={chain.name ?? 'Chain icon'}
+                                src={chain.iconUrl}
+                                style={{width: 12, height: 12}}
+                              />
+                            )}
+                          </div>
+                        )}
+                        {chain.name}
+                      </span>*/}
 
                     <span onClick={openAccountModal}>
-                      {account.displayName}
+                        {account.displayName}
                       {account.displayBalance
                         ? ` (${account.displayBalance})`
                         : ''}
-                    </span>
+                      </span>
                   </>
                 );
               })()}
@@ -92,5 +94,7 @@ export default function LoginMenu() {
         }}
       </ConnectButton.Custom>
     </>
-  )
-}
+  );
+};
+
+export default LoginMenu

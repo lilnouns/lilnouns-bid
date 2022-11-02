@@ -1,8 +1,10 @@
-import {Hero} from "./content/hero";
+import Hero from "./content/hero";
 import Panel from "./panel";
 import {useAuction, useLilNoun} from "../hooks";
 
-export default function Content() {
+type Props = {};
+
+const Content = ({}: Props) => {
   const {data: auction} = useAuction();
   const {data: lilNoun} = useLilNoun(auction?.nounId?.toNumber())
 
@@ -15,4 +17,6 @@ export default function Content() {
       </section>
     </main>
   )
-}
+};
+
+export default Content
