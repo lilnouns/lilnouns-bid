@@ -9,7 +9,9 @@ const navigation = [
   {name: 'Discord', href: 'https://discord.com/channels/954142017556979752/1011648759630930010'},
 ]
 
-export default function Header() {
+type Props = {};
+
+const Header = ({}: Props) => {
   return (
     <Popover>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -19,10 +21,10 @@ export default function Header() {
               <a href="#">
                 <span className="sr-only">Lil Nouns Helpers</span>
                 {/*<img
-                      className="h-8 w-auto sm:h-10"
-                      src="https://tailwindui.com/img/logos/workflow-mark-neutral-600.svg"
-                      alt=""
-                    />*/}
+                    className="h-8 w-auto sm:h-10"
+                    src="https://tailwindui.com/img/logos/workflow-mark-neutral-600.svg"
+                    alt=""
+                  />*/}
               </a>
               <div className="-mr-2 flex items-center md:hidden">
                 <Popover.Button
@@ -41,7 +43,7 @@ export default function Header() {
             ))}
           </div>
           <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-            <LoginButton />
+            <LoginButton/>
           </div>
         </nav>
       </div>
@@ -62,12 +64,12 @@ export default function Header() {
           <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
             <div className="px-5 pt-4 flex items-center justify-between">
               {/*<div>
-                    <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-neutral-600.svg"
-                      alt=""
-                    />
-                  </div>*/}
+                  <img
+                    className="h-8 w-auto"
+                    src="https://tailwindui.com/img/logos/workflow-mark-neutral-600.svg"
+                    alt=""
+                  />
+                </div>*/}
               <div className="-mr-2">
                 <Popover.Button
                   className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-neutral-500">
@@ -87,10 +89,12 @@ export default function Header() {
                 </a>
               ))}
             </div>
-            <LoginMenu />
+            <LoginMenu/>
           </div>
         </Popover.Panel>
       </Transition>
     </Popover>
-  )
-}
+  );
+};
+
+export default Header
