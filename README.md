@@ -1,3 +1,7 @@
+# Lil Nouns Bid
+
+Bid faster and more efficient for bidding on auction.
+
 ## Getting Started
 
 First, run the development server:
