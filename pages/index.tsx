@@ -9,7 +9,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Lil Nouns Bid</title>
-        <meta name="description" content="Simple interface to bit and see last auctions" />
+        <meta name="description" content="Bid faster and more efficient for bidding on auction." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
