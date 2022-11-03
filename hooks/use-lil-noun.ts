@@ -7,7 +7,7 @@ export type LilNoun = {
   description: string
 }
 
-export function useLilNoun(tokenId: number) {
+export const useLilNoun = (tokenId: number) => {
   const {data: dataURI, error} = useContractRead({
     address: LilNounsTokenReference.address,
     abi: LilNounsTokenReference.abi,
@@ -19,4 +19,4 @@ export function useLilNoun(tokenId: number) {
   const data = JSON.parse(json || "{}") as LilNoun;
 
   return {data, error}
-}
+};

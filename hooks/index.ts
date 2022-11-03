@@ -1,2 +1,2 @@
-export * from './useAuction'
-export * from './useLilNoun'
+export * from './use-auction'
+export * from './use-lil-noun'

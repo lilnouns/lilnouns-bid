@@ -11,7 +11,7 @@ export type Auction = {
   settled: boolean
 }
 
-export function useAuction() {
+export const useAuction = () => {
   const {data: auction, error} = useContractRead({
     address: LilNounsAuctionReference.address,
     abi: LilNounsAuctionReference.abi,
@@ -24,4 +24,4 @@ export function useAuction() {
   return {
     data: {nounId, amount, startTime, endTime, bidder, settled}, error
   }
-}
+};
