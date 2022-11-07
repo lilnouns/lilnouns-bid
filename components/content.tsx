@@ -1,16 +1,15 @@
-import Hero from "./content/hero";
-import Panel from "./panel";
 import {useAuction, useLilNoun} from "../hooks";
+import {ContentHero, Panel} from "./";
 
 type Props = {};
 
-const Content = ({}: Props) => {
+export const Content = ({}: Props) => {
   const {data: auction} = useAuction();
   const {data: lilNoun} = useLilNoun(auction?.nounId?.toNumber())
 
   return (
     <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 min-h-screen">
-      <Hero/>
+      <ContentHero/>
 
       <section>
         <Panel auction={auction} lilNoun={lilNoun}/>
@@ -18,5 +17,3 @@ const Content = ({}: Props) => {
     </main>
   )
 };
-
-export default Content

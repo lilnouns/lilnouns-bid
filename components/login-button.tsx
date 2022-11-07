@@ -2,7 +2,7 @@ import {ConnectButton} from "@rainbow-me/rainbowkit";
 
 type Props = {};
 
-const LoginButton = ({}: Props) => {
+export const LoginButton = ({}: Props) => {
   return (
     <>
       <ConnectButton.Custom>
@@ -108,5 +108,3 @@ const LoginButton = ({}: Props) => {
     </>
   );
 };
-
-export default LoginButton

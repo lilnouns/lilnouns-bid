@@ -1,6 +1,6 @@
 type Props = {};
 
-const Hero = ({}: Props) => (
+export const ContentHero = ({}: Props) => (
   <div className="text-center">
     <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
       <span className="block xl:inline">Lil Nouns</span>{" "}
@@ -13,5 +13,3 @@ const Hero = ({}: Props) => (
     </div>
   </div>
 );
-
-export default Hero

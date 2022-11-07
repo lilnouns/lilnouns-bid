@@ -1,8 +1,7 @@
 import {Fragment} from 'react'
 import {Popover, Transition} from '@headlessui/react'
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
-import LoginButton from "./login-button";
-import LoginMenu from "./login-menu";
+import {LoginButton, LoginMenu} from "./";
 
 const navigation = [
   {name: 'Home', href: '/'},
@@ -11,7 +10,7 @@ const navigation = [
 
 type Props = {};
 
-const Header = ({}: Props) => {
+export const Header = ({}: Props) => {
   return (
     <Popover>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -96,5 +95,3 @@ const Header = ({}: Props) => {
     </Popover>
   );
 };
-
-export default Header

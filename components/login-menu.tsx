@@ -2,7 +2,7 @@ import {ConnectButton} from "@rainbow-me/rainbowkit";
 
 type Props = {};
 
-const LoginMenu = ({}: Props) => {
+export const LoginMenu = ({}: Props) => {
   return (
     <>
       <ConnectButton.Custom>
@@ -96,5 +96,3 @@ const LoginMenu = ({}: Props) => {
     </>
   );
 };
-
-export default LoginMenu

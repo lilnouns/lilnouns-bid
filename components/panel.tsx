@@ -7,7 +7,7 @@ type Props = {
   lilNoun: LilNoun;
 };
 
-const Panel = ({auction, lilNoun}: Props) => {
+export const Panel = ({auction, lilNoun}: Props) => {
   const isIdle = useIdle(60e3);
 
   useEffect(() => {
@@ -24,5 +24,3 @@ const Panel = ({auction, lilNoun}: Props) => {
     </div>
   );
 };
-
-export default Panel

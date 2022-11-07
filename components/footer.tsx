@@ -67,7 +67,7 @@ const navigation: any[] = [
 
 type Props = {};
 
-const Footer = ({}: Props) => {
+export const Footer = ({}: Props) => {
   return (
     <footer className="bg-gray-100">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
@@ -86,5 +86,3 @@ const Footer = ({}: Props) => {
     </footer>
   );
 };
-
-export default Footer
