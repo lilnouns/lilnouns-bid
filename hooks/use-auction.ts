@@ -2,7 +2,7 @@ import {useContractRead} from "wagmi";
 import LilNounsAuctionReference from "../json/lilnouns-auction.json";
 import {BigNumber} from "ethers";
 
-export type Auction = {
+export interface AuctionInterface {
   nounId: BigNumber
   amount: BigNumber
   startTime: BigNumber
@@ -19,7 +19,7 @@ export const useAuction = () => {
     watch: true,
   });
 
-  const {nounId, amount, startTime, endTime, bidder, settled} = auction as Auction || {}
+  const {nounId, amount, startTime, endTime, bidder, settled} = auction as AuctionInterface || {}
 
   return {
     data: {nounId, amount, startTime, endTime, bidder, settled}, error
