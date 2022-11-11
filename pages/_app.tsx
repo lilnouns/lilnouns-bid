@@ -20,11 +20,11 @@ const {chains, provider, webSocketProvider} = configureChains(defaultChains, [
     priority: 0,
   }),
   infuraProvider({
-    apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY,
+    apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY!,
     priority: 1,
   }),
   alchemyProvider({
-    apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
+    apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY!,
     priority: 2,
   }),
   publicProvider({priority: 3}),
