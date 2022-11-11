@@ -4,6 +4,7 @@ import {LilNoun} from "../hooks";
 import {useIdle} from "react-use";
 import {ethers} from "ethers";
 import {AuctionButton} from "./auction-button";
+import dayjs from "dayjs";
 
 const product = {
   types: [
@@ -23,7 +24,15 @@ function classNames(...classes: string[]) {
 
 export const Auction = ({auction, lilNoun}: Props) => {
   const isIdle = useIdle(60e3);
-  const [selectedType, setSelectedType] = useState(product.types[0])
+  const [selectedType, setSelectedType] = useState(product.types[0]);
+  const [isAuctionActive, setAuctionActive] = useState(false);
+
+  useEffect(() => {
+    const currentTime = dayjs();
+    const endOfAuction = dayjs.unix(auction!.endTime.toNumber());
+
+    if (currentTime.isBefore(endOfAuction)) setAuctionActive(true);
+  }, [auction, isIdle])
 
   useEffect(() => {
     console.log(lilNoun);
@@ -76,7 +85,7 @@ export const Auction = ({auction, lilNoun}: Props) => {
             <form>
               <div className="sm:flex sm:justify-between">
                 {/* Type selector */}
-                <RadioGroup value={selectedType} onChange={setSelectedType}>
+                <RadioGroup value={selectedType} onChange={setSelectedType} disabled={!isAuctionActive}>
                   <RadioGroup.Label className="block text-sm font-medium text-gray-700">Type</RadioGroup.Label>
                   <div className="mt-1 grid grid-cols-1 gap-4 sm:grid-cols-2">
                     {product.types.map((type) => (
@@ -115,7 +124,7 @@ export const Auction = ({auction, lilNoun}: Props) => {
                 </RadioGroup>
               </div>
 
-              <AuctionButton auction={auction} />
+              <AuctionButton disabled={!isAuctionActive} auction={auction}/>
 
             </form>
           </section>
