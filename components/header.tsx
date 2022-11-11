@@ -1,7 +1,7 @@
 import {Fragment} from 'react'
 import {Popover, Transition} from '@headlessui/react'
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
-import {LoginButton, LoginMenu} from "./";
+import {ConnectButton, ConnectMenu} from "./";
 
 const navigation = [
   {name: 'Home', href: '/'},
@@ -42,7 +42,7 @@ export const Header = ({}: Props) => {
             ))}
           </div>
           <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-            <LoginButton/>
+            <ConnectButton/>
           </div>
         </nav>
       </div>
@@ -88,7 +88,7 @@ export const Header = ({}: Props) => {
                 </a>
               ))}
             </div>
-            <LoginMenu/>
+            <ConnectMenu/>
           </div>
         </Popover.Panel>
       </Transition>

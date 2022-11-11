@@ -1,11 +1,11 @@
-import {ConnectButton} from "@rainbow-me/rainbowkit";
+import {ConnectButton as Connect} from "@rainbow-me/rainbowkit";
 
 type Props = {};
 
-export const LoginMenu = ({}: Props) => {
+export const ConnectMenu = ({}: Props) => {
   return (
     <>
-      <ConnectButton.Custom>
+      <Connect.Custom>
         {({
             account,
             chain,
@@ -92,7 +92,7 @@ export const LoginMenu = ({}: Props) => {
             </a>
           );
         }}
-      </ConnectButton.Custom>
+      </Connect.Custom>
     </>
   );
 };
