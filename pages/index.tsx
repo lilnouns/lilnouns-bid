@@ -1,8 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import {Content, Footer, Header} from "../components";
+import {useIsMounted} from "../hooks";
 
 const Home: NextPage = () => {
+  const isMounted = useIsMounted()
+
+  if (!isMounted) return null
   return (
     <>
       <Head>
