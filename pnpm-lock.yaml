@@ -8,6 +8,7 @@ specifiers:
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.8
   autoprefixer: ^10.4.9
+  dayjs: ^1.11.6
   eslint: 8.27.0
   eslint-config-next: 13.0.3
   ethers: ^5.7.2
@@ -29,6 +30,7 @@ dependencies:
   '@heroicons/react': 2.0.12_react@18.2.0
   '@rainbow-me/rainbowkit': 0.7.4_gyriq2gewbkowe5mrcyfipeswu
   autoprefixer: 10.4.12_postcss@8.4.16
+  dayjs: 1.11.6
   ethers: 5.7.2
   next: 13.0.3_qtpcxnaaarbm4ws7ughq6oxfve
   next-seo: 5.8.0_ogpkrxaz2lg6nectum6dl66tn4

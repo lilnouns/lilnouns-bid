@@ -1,32 +1,45 @@
 import {useEffect, useState} from 'react'
 import {RadioGroup} from '@headlessui/react'
-import {LilNoun} from "../hooks";
+import {AuctionInterface, TokenDataInterface} from "../hooks";
 import {useIdle} from "react-use";
 import {ethers} from "ethers";
+import {AuctionButton} from "./auction-button";
+import dayjs from "dayjs";
+import {useBestBid} from "../hooks/use-best-bid";
 
 const product = {
   types: [
-    {name: '0.18 Ξ', description: 'Best bid based on current auction bids.'},
-    {name: '0.20 Ξ', description: 'Average best bid based on past auction wins.'},
+    {name: '0.15 Ξ', description: 'Best bid based on current auction bids.'},
+    {name: '0.16 Ξ', description: 'Average best bid based on past auction wins.'},
   ],
 }
 
 type Props = {
-  auction?: any;
-  lilNoun: LilNoun;
+  auction: AuctionInterface;
+  tokenData: TokenDataInterface;
 };
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export const Auction = ({auction, lilNoun}: Props) => {
+export const Auction = ({auction, tokenData}: Props) => {
   const isIdle = useIdle(60e3);
-  const [selectedType, setSelectedType] = useState(product.types[0])
+  const [selectedType, setSelectedType] = useState(product.types[0]);
+  const [isAuctionActive, setAuctionActive] = useState(false);
+
+  const bestBid = useBestBid();
 
   useEffect(() => {
-    console.log(lilNoun);
-  }, [auction, isIdle, lilNoun])
+    const currentTime = dayjs();
+    const endOfAuction = dayjs.unix(auction.endTime.toNumber());
+
+    if (currentTime.isBefore(endOfAuction)) {
+      setAuctionActive(true);
+      product.types[0].name = ethers.utils.formatEther(bestBid);
+    }
+
+  }, [auction, bestBid, isIdle])
 
   return (
     <div className="bg-white overflow-hidden shadow rounded-lg">
@@ -36,7 +49,7 @@ export const Auction = ({auction, lilNoun}: Props) => {
         <div className="lg:max-w-lg lg:self-end">
 
           <div className="mt-4">
-            <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{lilNoun.name}</h1>
+            <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{tokenData.name}</h1>
           </div>
 
           <section aria-labelledby="information-heading" className="mt-4">
@@ -45,7 +58,7 @@ export const Auction = ({auction, lilNoun}: Props) => {
             </h2>
 
             <div className="flex items-center">
-              <p className="text-lg text-gray-900 sm:text-xl">{ethers.utils.formatUnits(auction.amount, "ether")} Ξ</p>
+              <p className="text-lg text-gray-900 sm:text-xl">{ethers.utils.formatUnits(auction?.amount ?? "0", "ether")} Ξ</p>
             </div>
 
             <div className="mt-4 space-y-6">
@@ -61,7 +74,7 @@ export const Auction = ({auction, lilNoun}: Props) => {
         {/* Auction image */}
         <div className="mt-10 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-center">
           <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
-            <img src={lilNoun?.image} alt={lilNoun?.name} className="w-full h-full object-center object-cover"/>
+            <img src={tokenData?.image} alt={tokenData?.name} className="w-full h-full object-center object-cover"/>
           </div>
         </div>
 
@@ -75,7 +88,7 @@ export const Auction = ({auction, lilNoun}: Props) => {
             <form>
               <div className="sm:flex sm:justify-between">
                 {/* Type selector */}
-                <RadioGroup value={selectedType} onChange={setSelectedType}>
+                <RadioGroup value={selectedType} onChange={setSelectedType} disabled={!isAuctionActive}>
                   <RadioGroup.Label className="block text-sm font-medium text-gray-700">Type</RadioGroup.Label>
                   <div className="mt-1 grid grid-cols-1 gap-4 sm:grid-cols-2">
                     {product.types.map((type) => (
@@ -114,14 +127,7 @@ export const Auction = ({auction, lilNoun}: Props) => {
                 </RadioGroup>
               </div>
 
-              <div className="mt-10">
-                <button
-                  type="submit"
-                  className="w-full bg-neutral-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-neutral-500"
-                >
-                  Bid Now
-                </button>
-              </div>
+              <AuctionButton disabled={!isAuctionActive} auction={auction}/>
 
             </form>
           </section>
