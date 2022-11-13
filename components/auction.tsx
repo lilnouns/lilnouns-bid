@@ -1,12 +1,10 @@
 import {useEffect, useState} from 'react'
 import {RadioGroup} from '@headlessui/react'
-import {AuctionInterface, TokenDataInterface} from "../hooks";
+import {AuctionInterface, TokenDataInterface, useAverageBid, useBestBid} from "../hooks";
 import {useIdle} from "react-use";
 import {ethers} from "ethers";
 import {AuctionButton} from "./auction-button";
 import dayjs from "dayjs";
-import {useBestBid} from "../hooks/use-best-bid";
-import {useAverageBid} from "../hooks/use-average-bid";
 
 const product = {
   types: [
@@ -61,7 +59,8 @@ export const Auction = ({auction, tokenData}: Props) => {
             </h2>
 
             <div className="flex items-center">
-              <p className="text-lg text-gray-900 sm:text-xl">{ethers.utils.formatUnits(auction?.amount ?? "0", "ether")} Ξ</p>
+              <p
+                className="text-lg text-gray-900 sm:text-xl">{ethers.utils.formatUnits(auction?.amount ?? "0", "ether")} Ξ</p>
             </div>
 
             <div className="mt-4 space-y-6">

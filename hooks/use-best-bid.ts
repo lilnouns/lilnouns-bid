@@ -1,8 +1,7 @@
 import {useContractRead} from "wagmi";
 import {abi, address} from "../json/lilnouns-auction.json";
 import {useMemo} from "react";
-import {useReservePrice} from "./use-reserve-price";
-import {useAuction} from "./use-auction";
+import {useAuction, useReservePrice} from "./";
 import {BigNumber} from "ethers";
 
 export type MinBidIncrementPercentageResult = ReturnType<typeof useContractRead> & {
