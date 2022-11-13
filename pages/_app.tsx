@@ -9,6 +9,7 @@ import {publicProvider} from 'wagmi/providers/public'
 import {alchemyProvider} from 'wagmi/providers/alchemy'
 import {infuraProvider} from 'wagmi/providers/infura'
 import {getDefaultWallets, RainbowKitProvider} from "@rainbow-me/rainbowkit";
+import {createClient as urqlCreatClient, Provider as UrqlProvider} from 'urql';
 
 const {chains, provider, webSocketProvider} = configureChains(defaultChains, [
   jsonRpcProvider({
@@ -20,11 +21,11 @@ const {chains, provider, webSocketProvider} = configureChains(defaultChains, [
     priority: 0,
   }),
   infuraProvider({
-    apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY!,
+    apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY ?? "",
     priority: 1,
   }),
   alchemyProvider({
-    apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY!,
+    apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY ?? "",
     priority: 2,
   }),
   publicProvider({priority: 3}),
@@ -35,19 +36,25 @@ const {connectors} = getDefaultWallets({
   chains
 });
 
-const client = createClient({
+const wagmiClient = createClient({
   autoConnect: true,
   connectors,
   provider,
   webSocketProvider
 })
 
+const urqlClient = urqlCreatClient({
+  url: process.env.NEXT_PUBLIC_GRAPHQL_API_URL ?? "",
+});
+
 function MyApp({Component, pageProps}: AppProps) {
   return (
-    <WagmiConfig client={client}>
+    <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains} modalSize="compact">
-        <DefaultSeo {...SEO} />
-        <Component {...pageProps} />
+        <UrqlProvider value={urqlClient}>
+          <DefaultSeo {...SEO} />
+          <Component {...pageProps} />
+        </UrqlProvider>
       </RainbowKitProvider>
     </WagmiConfig>
   );
