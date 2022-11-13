@@ -6,6 +6,7 @@ import {ethers} from "ethers";
 import {AuctionButton} from "./auction-button";
 import dayjs from "dayjs";
 import {useBestBid} from "../hooks/use-best-bid";
+import {useAverageBid} from "../hooks/use-average-bid";
 
 const product = {
   types: [
@@ -29,6 +30,7 @@ export const Auction = ({auction, tokenData}: Props) => {
   const [isAuctionActive, setAuctionActive] = useState(false);
 
   const bestBid = useBestBid();
+  const averageBid = useAverageBid();
 
   useEffect(() => {
     const currentTime = dayjs();
@@ -37,9 +39,10 @@ export const Auction = ({auction, tokenData}: Props) => {
     if (currentTime.isBefore(endOfAuction)) {
       setAuctionActive(true);
       product.types[0].name = ethers.utils.formatEther(bestBid);
+      product.types[1].name = ethers.utils.formatEther(averageBid);
     }
 
-  }, [auction, bestBid, isIdle])
+  }, [auction, averageBid, bestBid, isIdle])
 
   return (
     <div className="bg-white overflow-hidden shadow rounded-lg">
