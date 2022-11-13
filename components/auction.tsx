@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import {RadioGroup} from '@headlessui/react'
-import {LilNoun} from "../hooks";
+import {AuctionInterface, TokenDataInterface} from "../hooks";
 import {useIdle} from "react-use";
 import {ethers} from "ethers";
 import {AuctionButton} from "./auction-button";
@@ -14,29 +14,31 @@ const product = {
 }
 
 type Props = {
-  auction?: any;
-  lilNoun: LilNoun;
+  auction: AuctionInterface;
+  tokenData: TokenDataInterface;
 };
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export const Auction = ({auction, lilNoun}: Props) => {
+export const Auction = ({auction, tokenData}: Props) => {
   const isIdle = useIdle(60e3);
   const [selectedType, setSelectedType] = useState(product.types[0]);
   const [isAuctionActive, setAuctionActive] = useState(false);
 
   useEffect(() => {
     const currentTime = dayjs();
-    const endOfAuction = dayjs.unix(auction!.endTime.toNumber());
+    const endOfAuction = dayjs.unix(auction.endTime.toNumber());
 
     if (currentTime.isBefore(endOfAuction)) setAuctionActive(true);
   }, [auction, isIdle])
 
   useEffect(() => {
-    console.log(lilNoun);
-  }, [auction, isIdle, lilNoun])
+    console.log(tokenData);
+  }, [auction, isIdle, tokenData]);
+
+  // useMinBidIncrement()
 
   return (
     <div className="bg-white overflow-hidden shadow rounded-lg">
@@ -46,7 +48,7 @@ export const Auction = ({auction, lilNoun}: Props) => {
         <div className="lg:max-w-lg lg:self-end">
 
           <div className="mt-4">
-            <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{lilNoun.name}</h1>
+            <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{tokenData.name}</h1>
           </div>
 
           <section aria-labelledby="information-heading" className="mt-4">
@@ -55,7 +57,7 @@ export const Auction = ({auction, lilNoun}: Props) => {
             </h2>
 
             <div className="flex items-center">
-              <p className="text-lg text-gray-900 sm:text-xl">{ethers.utils.formatUnits(auction.amount, "ether")} Ξ</p>
+              <p className="text-lg text-gray-900 sm:text-xl">{ethers.utils.formatUnits(auction?.amount ?? "0", "ether")} Ξ</p>
             </div>
 
             <div className="mt-4 space-y-6">
@@ -71,7 +73,7 @@ export const Auction = ({auction, lilNoun}: Props) => {
         {/* Auction image */}
         <div className="mt-10 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-center">
           <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
-            <img src={lilNoun?.image} alt={lilNoun?.name} className="w-full h-full object-center object-cover"/>
+            <img src={tokenData?.image} alt={tokenData?.name} className="w-full h-full object-center object-cover"/>
           </div>
         </div>
 

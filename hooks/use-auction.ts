@@ -1,6 +1,7 @@
 import {useContractRead} from "wagmi";
-import LilNounsAuctionReference from "../json/lilnouns-auction.json";
+import {abi, address} from "../json/lilnouns-auction.json";
 import {BigNumber} from "ethers";
+import {useMemo} from "react";
 
 export interface AuctionInterface {
   nounId: BigNumber
@@ -11,17 +12,26 @@ export interface AuctionInterface {
   settled: boolean
 }
 
+export type AuctionResult = ReturnType<typeof useContractRead> & {
+  data?: AuctionInterface
+};
+
 export const useAuction = () => {
-  const {data: auction, error} = useContractRead({
-    address: LilNounsAuctionReference.address,
-    abi: LilNounsAuctionReference.abi,
+  const result = useContractRead({
+    address,
+    abi,
     functionName: 'auction',
     watch: true,
-  });
+  }) as AuctionResult;
 
-  const {nounId, amount, startTime, endTime, bidder, settled} = auction as AuctionInterface || {}
-
-  return {
-    data: {nounId, amount, startTime, endTime, bidder, settled}, error
-  }
+  return useMemo(() => {
+    return result.data ?? {
+      nounId: BigNumber.from(0),
+      amount: BigNumber.from(0),
+      startTime: BigNumber.from(0),
+      endTime: BigNumber.from(0),
+      bidder: "",
+      settled: false,
+    };
+  }, [result])
 };

@@ -1,3 +1,3 @@
 export * from './use-auction'
-export * from './use-lil-noun'
+export * from './use-token-data'
 export * from './use-is-mounted'
