@@ -2,6 +2,75 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.11] - 2022-11-13
+
+### <!-- 01 -->Features
+
+- Add a customized wallet connect as login button
+- Disable biding when auction is not active
+- Add new hook for getting auction reserve price
+- Add new hook for getting best bid for auction
+- Add new hook for getting average bid for auction
+
+### <!-- 02 -->Bug Fixes
+
+- Enable login button over header component
+- Solve api key envionmental variable type issues
+- Solve react hydration error by adding `useIsMounted`
+
+### <!-- 04 -->Refactor
+
+- Create a separated component for display auction
+- Change blockchain rpc providers priority
+- Add `ankr` ro the app rpc providers
+- Add `useAuction` hook to get latest auction
+- Add `useLilNoun` hook to get lilnoun by token id
+- Improve some of hooks and components
+- Replace `Auction` component by `Panel`
+- Update and improve all function components
+- Improve auction ui and replace panel by auction
+- Rename login components to connect components
+- Split auction button to a separated component
+- Improve strict types over hooks and components
+
+### <!-- 05 -->Documentation
+
+- Update and improve project readme file
+- Update site description over index page
+
+### <!-- 07 -->Continuous Integrations
+
+- Add node version `19` to the `build` workflow
+- Reorder some steps over `build` workflow
+- Add `pnpm` workflow to patch updated lock files
+- Solve an issue on `pnpm` workflow push step
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump @types/node from 18.11.6 to 18.11.7
+- Bump @types/react-dom from 18.0.7 to 18.0.8
+- Bump @types/react from 18.0.23 to 18.0.24
+- Add `wagmi:0.7.7` to dependencies
+- Add `ethers:5.7.2` to dependencies
+- Add `@rainbow-me/rainbowkit:0.7.4` to dependencies
+- Bump @types/node from 18.11.7 to 18.11.9
+- Bump eslint-config-next from 13.0.0 to 13.0.1 ([#31](https://github.com/orhun/git-cliff/issues/31))
+- Bump next from 13.0.0 to 13.0.1 ([#32](https://github.com/orhun/git-cliff/issues/32))
+- Add a json reference file for lilnouns token contract
+- Add a json reference file for lilnouns auction contract
+- Add `react-use:17.4.0` to dependencies
+- Add `tilg:0.1.1` to dependencies
+- Bump next from 13.0.1 to 13.0.2 ([#33](https://github.com/orhun/git-cliff/issues/33))
+- Bump eslint-config-next from 13.0.1 to 13.0.2 ([#34](https://github.com/orhun/git-cliff/issues/34))
+- Bump @types/react from 18.0.24 to 18.0.25 ([#35](https://github.com/orhun/git-cliff/issues/35))
+- Bump wagmi from 0.7.15 to 0.8.1 ([#37](https://github.com/orhun/git-cliff/issues/37))
+- Bump eslint from 8.26.0 to 8.27.0 ([#36](https://github.com/orhun/git-cliff/issues/36))
+- Update `pnpm` lockfile state
+- Bump next from 13.0.2 to 13.0.3 ([#38](https://github.com/orhun/git-cliff/issues/38))
+- Bump eslint-config-next from 13.0.2 to 13.0.3 ([#39](https://github.com/orhun/git-cliff/issues/39))
+- Add `dayjs:1.11.6` to dependencies
+- Add `urql` and `graphql` to dependencies
+
 ## [1.0.0-alpha.10] - 2022-10-26
 
 ### <!-- 08 -->Miscellaneous Tasks
