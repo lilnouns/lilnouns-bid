@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.12] - 2022-11-13
+
+### <!-- 04 -->Refactor
+
+- Improve and optimize hooks imports
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Update `pnpm` lockfile state
+
 ## [1.0.0-alpha.11] - 2022-11-13
 
 ### <!-- 01 -->Features

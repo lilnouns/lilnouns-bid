@@ -1,7 +1,7 @@
 import {useQuery} from "urql";
 import {useMemo} from "react";
 import {BigNumber} from "ethers";
-import {useAuction} from "./use-auction";
+import {useAuction} from "./";
 
 const query = `
   query Auctions($amount: BigInt = "0") {
