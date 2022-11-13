@@ -1,15 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Header from "../components/header";
-import Content from "../components/content";
-import Footer from "../components/footer";
+import {Content, Footer, Header} from "../components";
+import {useIsMounted} from "../hooks";
 
 const Home: NextPage = () => {
+  const isMounted = useIsMounted()
+
+  if (!isMounted) return null
   return (
     <>
       <Head>
         <title>Lil Nouns Bid</title>
-        <meta name="description" content="Simple interface to bit and see last auctions" />
+        <meta name="description" content="Bid faster and more efficient for bidding on auction." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

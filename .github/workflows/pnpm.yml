@@ -1,25 +1,24 @@
-name: Build
+name: Dependabot
 
 on:
-  push:
-    branches:
-      - master
-      - develop
-      - bugfix/*
-      - hotfix/*
-      - release/*
-    paths-ignore:
-      - "**/*.md"
-  pull_request:
+  pull_request_target:
   workflow_dispatch:
 
+permissions: read-all
+
 jobs:
-  build:
+  update-lockfile:
     runs-on: ubuntu-latest
+
+    if: ${{ github.actor == 'dependabot[bot]' }}
+
+    permissions:
+      pull-requests: write
+      contents: write
 
     strategy:
       matrix:
-        node-version: [16.x, 17.x, 18.x, 19.x]
+        node-version: [ 17.x ]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -50,11 +49,16 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v3.1.0
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
 
-      - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+      - name: Update lock file
+        run: pnpm i --lockfile-only
 
-      - name: Build & export the app
-        run: pnpm run export
-        env:
-          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL  }}
+      - name: Push the updated lock file
+        run: |
+          git config --global user.name github-actions[bot]
+          git config --global user.email github-actions[bot]@users.noreply.github.com
+          git add pnpm-lock.yaml
+          git commit -m 'chore(deps): update the `pnpm` lock file'
+          git push

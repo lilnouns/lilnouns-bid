@@ -1,13 +1,21 @@
-import {Hero} from "./content/hero";
+import {useAuction, useTokenData} from "../hooks";
+import {Auction, ContentHero} from "./";
+import {BigNumber} from "ethers";
 
-export default function Content() {
+type Props = {};
+
+export const Content = ({}: Props) => {
+  const auction = useAuction();
+  const nounId = auction?.nounId || BigNumber.from("0");
+  const tokenData = useTokenData(nounId!.toNumber())
+
   return (
-    <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 min-h-screen">
-      <Hero/>
+    <main className="mt-16 mx-auto max-w-5xl px-4 sm:mt-24 min-h-screen">
+      <ContentHero/>
 
       <section>
-
+        {auction && tokenData && <Auction auction={auction} tokenData={tokenData}/>}
       </section>
     </main>
   )
-}
+};
