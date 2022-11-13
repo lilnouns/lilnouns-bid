@@ -5,11 +5,12 @@ import {useIdle} from "react-use";
 import {ethers} from "ethers";
 import {AuctionButton} from "./auction-button";
 import dayjs from "dayjs";
+import {useBestBid} from "../hooks/use-best-bid";
 
 const product = {
   types: [
-    {name: '0.18 Ξ', description: 'Best bid based on current auction bids.'},
-    {name: '0.20 Ξ', description: 'Average best bid based on past auction wins.'},
+    {name: '0.15 Ξ', description: 'Best bid based on current auction bids.'},
+    {name: '0.16 Ξ', description: 'Average best bid based on past auction wins.'},
   ],
 }
 
@@ -27,18 +28,18 @@ export const Auction = ({auction, tokenData}: Props) => {
   const [selectedType, setSelectedType] = useState(product.types[0]);
   const [isAuctionActive, setAuctionActive] = useState(false);
 
+  const bestBid = useBestBid();
+
   useEffect(() => {
     const currentTime = dayjs();
     const endOfAuction = dayjs.unix(auction.endTime.toNumber());
 
-    if (currentTime.isBefore(endOfAuction)) setAuctionActive(true);
-  }, [auction, isIdle])
+    if (currentTime.isBefore(endOfAuction)) {
+      setAuctionActive(true);
+      product.types[0].name = ethers.utils.formatEther(bestBid);
+    }
 
-  useEffect(() => {
-    console.log(tokenData);
-  }, [auction, isIdle, tokenData]);
-
-  // useMinBidIncrement()
+  }, [auction, bestBid, isIdle])
 
   return (
     <div className="bg-white overflow-hidden shadow rounded-lg">
