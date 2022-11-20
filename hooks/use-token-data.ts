@@ -24,16 +24,16 @@ export const useTokenData = (tokenId: number) => {
   }) as DataUriResult;
 
   return useMemo(() => {
-    if (!result) {
-      return undefined;
+    if (!result?.data) {
+      return null;
     }
 
     try {
-      const json = Buffer.from(`${result?.data}`.substring(29), 'base64').toString();
+      const json = Buffer.from(`${result.data}`.substring(29), 'base64').toString();
       const data: TokenDataInterface = JSON.parse(json);
       return data;
-    } catch (e) {
-      console.error(e)
+    } catch (error) {
+      console.error(error);
     }
   }, [result])
 };
