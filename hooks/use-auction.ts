@@ -1,10 +1,7 @@
 import {useContractRead} from "wagmi";
-import contract from "../json/lilnouns-auction.json";
 import {BigNumber} from "ethers";
 import {useMemo} from "react";
-
-// Extract contract info
-const {abi, address} = contract;
+import {useContractAbi} from "./use-contract-abi";
 
 export interface AuctionInterface {
   nounId: BigNumber
@@ -20,6 +17,9 @@ export type AuctionResult = ReturnType<typeof useContractRead> & {
 };
 
 export const useAuction = () => {
+  const address = process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT ?? '';
+  const abi = useContractAbi('auction');
+
   const result = useContractRead({
     address,
     abi,
