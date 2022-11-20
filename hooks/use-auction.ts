@@ -26,14 +26,5 @@ export const useAuction = () => {
     watch: true,
   }) as AuctionResult;
 
-  return useMemo(() => {
-    return result.data ?? {
-      nounId: BigNumber.from(0),
-      amount: BigNumber.from(0),
-      startTime: BigNumber.from(0),
-      endTime: BigNumber.from(0),
-      bidder: "",
-      settled: false,
-    };
-  }, [result])
+  return useMemo(() => result.data, [result])
 };

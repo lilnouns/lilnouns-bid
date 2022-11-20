@@ -18,10 +18,10 @@ const query = `
 `;
 
 export const useAverageBid = () => {
-  const {amount} = useAuction();
+  const auction = useAuction();
   const [{data}] = useQuery({
     query,
-    variables: {amount: amount.toString()}
+    variables: {amount: (auction?.amount ?? 0).toString()}
   })
 
   const auctions: {id: number, amount: BigNumber}[] = useMemo(() => {
