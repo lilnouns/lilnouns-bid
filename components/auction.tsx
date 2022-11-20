@@ -1,10 +1,9 @@
 import {useEffect, useState} from 'react'
 import {RadioGroup} from '@headlessui/react'
-import {AuctionInterface, TokenDataInterface, useAverageBid, useBestBid} from "../hooks";
+import {AuctionInterface, AuctionState, TokenDataInterface, useAuctionState, useAverageBid, useBestBid} from "../hooks";
 import {useIdle} from "react-use";
 import {ethers} from "ethers";
 import {AuctionButton} from "./auction-button";
-import dayjs from "dayjs";
 
 const product = {
   types: [
@@ -29,12 +28,10 @@ export const Auction = ({auction, tokenData}: Props) => {
 
   const bestBid = useBestBid();
   const averageBid = useAverageBid();
+  const actionState = useAuctionState();
 
   useEffect(() => {
-    const currentTime = dayjs();
-    const endOfAuction = dayjs.unix(auction?.endTime?.toNumber() ?? 0);
-
-    if (currentTime.isBefore(endOfAuction)) {
+    if (actionState === AuctionState.ACTIVE) {
       setAuctionActive(true);
       product.types[0].name = ethers.utils.formatEther(bestBid);
       product.types[1].name = ethers.utils.formatEther(averageBid);
