@@ -1,8 +1,8 @@
 import {useContractRead} from "wagmi";
+import abi from "../json/lilnouns-auction.json";
 import {useMemo} from "react";
 import {useAuction, useReservePrice} from "./";
 import {BigNumber} from "ethers";
-import {useContractAbi} from "./use-contract-abi";
 
 export type MinBidIncrementPercentageResult = ReturnType<typeof useContractRead> & {
   data?: number
@@ -10,7 +10,6 @@ export type MinBidIncrementPercentageResult = ReturnType<typeof useContractRead>
 
 export const useBestBid = () => {
   const address = process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT ?? '';
-  const abi = useContractAbi('auction');
 
   const {amount: currentBid} = useAuction();
   const reservePrice = useReservePrice();

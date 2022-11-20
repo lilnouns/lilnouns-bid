@@ -1,6 +1,6 @@
 import {useContractRead} from "wagmi";
+import abi from "../json/lilnouns-auction.json";
 import {useMemo} from "react";
-import {useContractAbi} from "./use-contract-abi";
 
 export interface TokenDataInterface {
   name: string
@@ -14,7 +14,6 @@ export type DataUriResult = ReturnType<typeof useContractRead> & {
 
 export const useTokenData = (tokenId: number) => {
   const address = process.env.NEXT_PUBLIC_LILNOUNS_TOKEN_CONTRACT ?? '';
-  const abi = useContractAbi('token');
 
   const result = useContractRead({
     address,
