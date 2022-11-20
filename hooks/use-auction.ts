@@ -1,7 +1,10 @@
 import {useContractRead} from "wagmi";
-import {abi, address} from "../json/lilnouns-auction.json";
+import contract from "../json/lilnouns-auction.json";
 import {BigNumber} from "ethers";
 import {useMemo} from "react";
+
+// Extract contract info
+const {abi, address} = contract;
 
 export interface AuctionInterface {
   nounId: BigNumber
