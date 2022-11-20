@@ -1,5 +1,5 @@
 import {useContractRead} from "wagmi";
-import abi from "../json/lilnouns-auction.json";
+import abi from "../json/lilnouns-token.json";
 import {useMemo} from "react";
 
 export interface TokenDataInterface {
