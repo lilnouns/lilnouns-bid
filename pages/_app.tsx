@@ -3,7 +3,7 @@ import '../styles/globals.css'
 import type {AppProps} from 'next/app'
 import {DefaultSeo} from "next-seo";
 import SEO from '../next-seo.config';
-import {configureChains, createClient, defaultChains, WagmiConfig} from "wagmi";
+import {chain, configureChains, createClient, WagmiConfig} from "wagmi";
 import {jsonRpcProvider} from "wagmi/providers/jsonRpc";
 import {publicProvider} from 'wagmi/providers/public'
 import {alchemyProvider} from 'wagmi/providers/alchemy'
@@ -11,12 +11,17 @@ import {infuraProvider} from 'wagmi/providers/infura'
 import {getDefaultWallets, RainbowKitProvider} from "@rainbow-me/rainbowkit";
 import {createClient as urqlCreatClient, Provider as UrqlProvider} from 'urql';
 
-const {chains, provider, webSocketProvider} = configureChains(defaultChains, [
+let chainConfig = process.env.NODE_ENV === 'development'
+  ? [chain.goerli]
+  : [chain.mainnet];
+
+const {chains, provider, webSocketProvider} = configureChains(chainConfig, [
   jsonRpcProvider({
     rpc: () => {
-      return {
-        http: "https://rpc.ankr.com/eth",
-      };
+      let http: string = process.env.NODE_ENV === 'development'
+        ? "https://rpc.ankr.com/eth_goerli"
+        : "https://rpc.ankr.com/eth";
+      return {http};
     },
     priority: 0,
   }),
