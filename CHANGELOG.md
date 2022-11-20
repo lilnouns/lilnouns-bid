@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.13] - 2022-11-20
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump next from 13.0.3 to 13.0.4 ([#43](https://github.com/orhun/git-cliff/issues/43))
+- Bump eslint-config-next from 13.0.3 to 13.0.4 ([#44](https://github.com/orhun/git-cliff/issues/44))
+- Bump @types/react-dom from 18.0.8 to 18.0.9 ([#41](https://github.com/orhun/git-cliff/issues/41))
+- Bump typescript from 4.8.4 to 4.9.3 ([#42](https://github.com/orhun/git-cliff/issues/42))
+- Bump eslint from 8.27.0 to 8.28.0 ([#45](https://github.com/orhun/git-cliff/issues/45))
+- Bump wagmi from 0.7.15 to 0.8.5 ([#46](https://github.com/orhun/git-cliff/issues/46))
+- Specifiy node version of cloudflare pages
+
 ## [1.0.0-alpha.12] - 2022-11-13
 
 ### <!-- 04 -->Refactor
