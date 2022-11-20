@@ -1,7 +1,10 @@
 import {useContractRead} from "wagmi";
-import LilNounsAuctionReference from "../json/lilnouns-auction.json";
+import contract from "../json/lilnouns-auction.json";
 import {useMemo} from "react";
 import {BigNumber} from "ethers";
+
+// Extract contract info
+const {abi, address} = contract;
 
 export type ReservePriceResult = ReturnType<typeof useContractRead> & {
   data?: BigNumber
@@ -9,8 +12,8 @@ export type ReservePriceResult = ReturnType<typeof useContractRead> & {
 
 export const useReservePrice = () => {
   const result = useContractRead({
-    address: LilNounsAuctionReference.address,
-    abi: LilNounsAuctionReference.abi,
+    address,
+    abi,
     functionName: 'reservePrice',
     watch: false,
   }) as ReservePriceResult;

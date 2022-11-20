@@ -1,6 +1,9 @@
 import {useContractRead} from "wagmi";
-import LilNounsTokenReference from "../json/lilnouns-token.json";
+import contract from "../json/lilnouns-auction.json";
 import {useMemo} from "react";
+
+// Extract contract info
+const {abi, address} = contract;
 
 export interface TokenDataInterface {
   name: string
@@ -14,8 +17,8 @@ export type DataUriResult = ReturnType<typeof useContractRead> & {
 
 export const useTokenData = (tokenId: number) => {
   const result = useContractRead({
-    address: LilNounsTokenReference.address,
-    abi: LilNounsTokenReference.abi,
+    address,
+    abi,
     functionName: 'dataURI',
     args: [tokenId]
   }) as DataUriResult;
