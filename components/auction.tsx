@@ -38,6 +38,9 @@ export const Auction = ({auction, tokenData}: Props) => {
       setAuctionActive(true);
       product.types[0].name = ethers.utils.formatEther(bestBid);
       product.types[1].name = ethers.utils.formatEther(averageBid);
+    } else {
+      product.types[0].name = ethers.utils.formatEther(auction?.amount ?? '0') + ' Ξ';
+      product.types[1].name = ethers.utils.formatEther(auction?.amount ?? '0') + ' Ξ';
     }
 
   }, [auction, averageBid, bestBid, isIdle])
