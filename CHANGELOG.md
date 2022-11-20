@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.14] - 2022-11-20
+
+### <!-- 02 -->Bug Fixes
+
+- Solve some linting warnings regarding contract fields
+
 ## [1.0.0-alpha.13] - 2022-11-20
 
 ### <!-- 08 -->Miscellaneous Tasks
