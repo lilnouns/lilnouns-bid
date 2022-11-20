@@ -11,8 +11,9 @@ export type MinBidIncrementPercentageResult = ReturnType<typeof useContractRead>
 export const useBestBid = () => {
   const address = process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT ?? '';
 
-  const {amount: currentBid} = useAuction();
+  const auction = useAuction();
   const reservePrice = useReservePrice();
+  const currentBid = BigNumber.from(auction?.amount ?? reservePrice);
 
   const result = useContractRead({
     address,

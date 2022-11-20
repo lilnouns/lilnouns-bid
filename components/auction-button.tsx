@@ -6,8 +6,8 @@ function classNames(...classes: string[]) {
 }
 
 type Props = {
-  auction: AuctionInterface,
-  disabled: boolean
+  disabled?: boolean,
+  auction?: AuctionInterface,
 }
 
 export const AuctionButton = ({auction, disabled}: Props) => {

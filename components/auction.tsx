@@ -14,8 +14,8 @@ const product = {
 }
 
 type Props = {
-  auction: AuctionInterface;
-  tokenData: TokenDataInterface;
+  auction?: AuctionInterface;
+  tokenData?: TokenDataInterface;
 };
 
 function classNames(...classes: string[]) {
@@ -32,7 +32,7 @@ export const Auction = ({auction, tokenData}: Props) => {
 
   useEffect(() => {
     const currentTime = dayjs();
-    const endOfAuction = dayjs.unix(auction.endTime.toNumber());
+    const endOfAuction = dayjs.unix(auction?.endTime?.toNumber() ?? 0);
 
     if (currentTime.isBefore(endOfAuction)) {
       setAuctionActive(true);
@@ -50,7 +50,7 @@ export const Auction = ({auction, tokenData}: Props) => {
         <div className="lg:max-w-lg lg:self-end">
 
           <div className="mt-4">
-            <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{tokenData.name}</h1>
+            <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{tokenData?.name}</h1>
           </div>
 
           <section aria-labelledby="information-heading" className="mt-4">

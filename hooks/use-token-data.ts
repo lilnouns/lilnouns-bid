@@ -24,7 +24,7 @@ export const useTokenData = (tokenId: number) => {
 
   return useMemo(() => {
     if (!result?.data) {
-      return null;
+      return;
     }
 
     try {
