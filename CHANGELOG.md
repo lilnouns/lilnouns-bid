@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.15] - 2022-11-22
+
+### <!-- 01 -->Features
+
+- Add `useContractAbi` hook to retrieve contract abi
+- Add ability to change chain based on environment
+- Add `useAuctionState` hook to access auction state
+- Implement settle and bid button functionality
+
+### <!-- 02 -->Bug Fixes
+
+- Solve json syntax error issue over `useTokenData`
+- Solving some issues regard load of components
+- Token abi for `useTokenData` hook
+
+### <!-- 04 -->Refactor
+
+- Move contract addresses to environment variables
+- Improve preset options based on last auction
+- Use new `useAuctionState` hook over auction components
+- Remove extra provider and cleanup app
+- Optimize imports and cleanup spaces
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump @rainbow-me/rainbowkit from 0.7.4 to 0.8.0 ([#47](https://github.com/orhun/git-cliff/issues/47))
+- Update dependencies and lock file
+
 ## [1.0.0-alpha.14] - 2022-11-20
 
 ### <!-- 02 -->Bug Fixes
