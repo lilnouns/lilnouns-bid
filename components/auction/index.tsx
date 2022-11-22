@@ -1,15 +1,8 @@
 import {useEffect, useState} from 'react'
 import {RadioGroup} from '@headlessui/react'
-import {
-  AuctionInterface,
-  AuctionState,
-  TokenDataInterface, useAuction,
-  useAuctionState,
-  useAverageBid,
-  useBestBid, useTokenData
-} from "../../hooks";
+import {AuctionState, useAuction, useAuctionState, useAverageBid, useBestBid, useTokenData} from "../../hooks";
 import {useIdle} from "react-use";
-import {BigNumber, ethers} from "ethers";
+import {BigNumber} from "ethers";
 import {SettleButton} from "./settle-button";
 import {BidButton} from "./bid-button";
 import {formatEther, formatUnits} from "ethers/lib/utils";
