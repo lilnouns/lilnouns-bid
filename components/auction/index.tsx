@@ -1,46 +1,48 @@
 import {useEffect, useState} from 'react'
 import {RadioGroup} from '@headlessui/react'
-import {AuctionInterface, AuctionState, TokenDataInterface, useAuctionState, useAverageBid, useBestBid} from "../hooks";
+import {
+  AuctionInterface,
+  AuctionState,
+  TokenDataInterface, useAuction,
+  useAuctionState,
+  useAverageBid,
+  useBestBid, useTokenData
+} from "../../hooks";
 import {useIdle} from "react-use";
-import {ethers} from "ethers";
-import {AuctionButton} from "./auction-button";
+import {BigNumber, ethers} from "ethers";
+import {SettleButton} from "./settle-button";
+import {BidButton} from "./bid-button";
+import {formatEther, formatUnits} from "ethers/lib/utils";
 
-const product = {
-  types: [
-    {name: '0.15 Ξ', description: 'Best bid based on current auction bids.'},
-    {name: '0.16 Ξ', description: 'Average best bid based on past auction wins.'},
-  ],
-}
-
-type Props = {
-  auction?: AuctionInterface;
-  tokenData?: TokenDataInterface;
-};
+type Props = {};
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export const Auction = ({auction, tokenData}: Props) => {
+export const Auction = ({}: Props) => {
   const isIdle = useIdle(60e3);
-  const [selectedType, setSelectedType] = useState(product.types[0]);
-  const [isAuctionActive, setAuctionActive] = useState(false);
+  const [selectedType, setSelectedType] = useState();
+
+  const auction = useAuction();
+  const nounId = auction?.nounId || BigNumber.from("0");
+  const tokenData = useTokenData(nounId.toNumber())
 
   const bestBid = useBestBid();
   const averageBid = useAverageBid();
-  const actionState = useAuctionState();
+  const auctionState = useAuctionState();
+
+  const [amount, setAmount] = useState<BigNumber>();
+
+  const [types, setTypes] = useState([
+    {name: `${formatEther(bestBid)} Ξ`, description: 'Best bid based on current auction bids.'},
+    {name: `${formatEther(averageBid)} Ξ`, description: 'Average best bid based on past auction wins.'},
+  ])
 
   useEffect(() => {
-    if (actionState === AuctionState.ACTIVE) {
-      setAuctionActive(true);
-      product.types[0].name = ethers.utils.formatEther(bestBid);
-      product.types[1].name = ethers.utils.formatEther(averageBid);
-    } else {
-      product.types[0].name = ethers.utils.formatEther(auction?.amount ?? '0') + ' Ξ';
-      product.types[1].name = ethers.utils.formatEther(auction?.amount ?? '0') + ' Ξ';
-    }
-
-  }, [auction, averageBid, bestBid, isIdle])
+    setAmount(bestBid)
+    setTypes([...types])
+  }, [auction, averageBid, bestBid, isIdle, types])
 
   return (
     <div className="bg-white overflow-hidden shadow rounded-lg">
@@ -60,7 +62,7 @@ export const Auction = ({auction, tokenData}: Props) => {
 
             <div className="flex items-center">
               <p
-                className="text-lg text-gray-900 sm:text-xl">{ethers.utils.formatUnits(auction?.amount ?? "0", "ether")} Ξ</p>
+                className="text-lg text-gray-900 sm:text-xl">{formatUnits(auction?.amount ?? "0", "ether")} Ξ</p>
             </div>
 
             <div className="mt-4 space-y-6">
@@ -90,13 +92,17 @@ export const Auction = ({auction, tokenData}: Props) => {
             <form>
               <div className="sm:flex sm:justify-between">
                 {/* Type selector */}
-                <RadioGroup value={selectedType} onChange={setSelectedType} disabled={!isAuctionActive}>
+                <RadioGroup
+                  value={selectedType}
+                  onChange={setSelectedType}
+                  disabled={auctionState !== AuctionState.ACTIVE}
+                >
                   <RadioGroup.Label className="block text-sm font-medium text-gray-700">Type</RadioGroup.Label>
                   <div className="mt-1 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    {product.types.map((type) => (
+                    {types.map((type, index) => (
                       <RadioGroup.Option
                         as="div"
-                        key={type.name}
+                        key={index}
                         value={type}
                         className={({active}) =>
                           classNames(
@@ -129,7 +135,10 @@ export const Auction = ({auction, tokenData}: Props) => {
                 </RadioGroup>
               </div>
 
-              <AuctionButton disabled={!isAuctionActive} auction={auction}/>
+              <div className="mt-10">
+                {auctionState === AuctionState.ACTIVE && <BidButton nounId={auction?.nounId} amount={amount}/>}
+                {auctionState === AuctionState.OVER_NOT_SETTLED && <SettleButton/>}
+              </div>
 
             </form>
           </section>
