@@ -1,16 +1,15 @@
 import {useContractRead} from "wagmi";
-import contract from "../json/lilnouns-auction.json";
+import abi from "../json/lilnouns-auction.json";
 import {useMemo} from "react";
 import {BigNumber} from "ethers";
-
-// Extract contract info
-const {abi, address} = contract;
 
 export type ReservePriceResult = ReturnType<typeof useContractRead> & {
   data?: BigNumber
 }
 
 export const useReservePrice = () => {
+  const address = process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT ?? '';
+
   const result = useContractRead({
     address,
     abi,

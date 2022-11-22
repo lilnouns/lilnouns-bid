@@ -3,32 +3,23 @@ import '../styles/globals.css'
 import type {AppProps} from 'next/app'
 import {DefaultSeo} from "next-seo";
 import SEO from '../next-seo.config';
-import {configureChains, createClient, defaultChains, WagmiConfig} from "wagmi";
-import {jsonRpcProvider} from "wagmi/providers/jsonRpc";
-import {publicProvider} from 'wagmi/providers/public'
-import {alchemyProvider} from 'wagmi/providers/alchemy'
+import {chain, configureChains, createClient, WagmiConfig} from "wagmi";
 import {infuraProvider} from 'wagmi/providers/infura'
 import {getDefaultWallets, RainbowKitProvider} from "@rainbow-me/rainbowkit";
 import {createClient as urqlCreatClient, Provider as UrqlProvider} from 'urql';
 
-const {chains, provider, webSocketProvider} = configureChains(defaultChains, [
-  jsonRpcProvider({
-    rpc: () => {
-      return {
-        http: "https://rpc.ankr.com/eth",
-      };
-    },
-    priority: 0,
-  }),
+const chainConfig = process.env.NODE_ENV === 'development'
+  ? [chain.goerli]
+  : [chain.mainnet];
+
+const infuraApiKey = process.env.NEXT_PUBLIC_INFURA_API_KEY!;
+
+const graphQlApiUrl = process.env.NEXT_PUBLIC_GRAPHQL_API_URL!;
+
+const {chains, provider, webSocketProvider} = configureChains(chainConfig, [
   infuraProvider({
-    apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY ?? "",
-    priority: 1,
-  }),
-  alchemyProvider({
-    apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY ?? "",
-    priority: 2,
-  }),
-  publicProvider({priority: 3}),
+    apiKey: infuraApiKey,
+  })
 ])
 
 const {connectors} = getDefaultWallets({
@@ -44,7 +35,7 @@ const wagmiClient = createClient({
 })
 
 const urqlClient = urqlCreatClient({
-  url: process.env.NEXT_PUBLIC_GRAPHQL_API_URL ?? "",
+  url: graphQlApiUrl,
 });
 
 function MyApp({Component, pageProps}: AppProps) {

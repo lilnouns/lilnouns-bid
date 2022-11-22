@@ -1,19 +1,19 @@
 import {useContractRead} from "wagmi";
-import contract from "../json/lilnouns-auction.json";
+import abi from "../json/lilnouns-auction.json";
 import {useMemo} from "react";
 import {useAuction, useReservePrice} from "./";
 import {BigNumber} from "ethers";
-
-// Extract contract info
-const {abi, address} = contract;
 
 export type MinBidIncrementPercentageResult = ReturnType<typeof useContractRead> & {
   data?: number
 }
 
 export const useBestBid = () => {
-  const {amount: currentBid} = useAuction();
+  const address = process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT ?? '';
+
+  const auction = useAuction();
   const reservePrice = useReservePrice();
+  const currentBid = BigNumber.from(auction?.amount ?? reservePrice);
 
   const result = useContractRead({
     address,
@@ -29,7 +29,6 @@ export const useBestBid = () => {
     if (currentBid.lt(reservePrice)) {
       _bestBid = reservePrice;
     } else {
-      console.log(minBidIncrementPercentage / 100)
       _bestBid = currentBid.mul(minBidIncrementPercentage).div(100).add(currentBid)
     }
 

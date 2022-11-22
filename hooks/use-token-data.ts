@@ -1,9 +1,6 @@
 import {useContractRead} from "wagmi";
-import contract from "../json/lilnouns-auction.json";
+import abi from "../json/lilnouns-token.json";
 import {useMemo} from "react";
-
-// Extract contract info
-const {abi, address} = contract;
 
 export interface TokenDataInterface {
   name: string
@@ -16,6 +13,8 @@ export type DataUriResult = ReturnType<typeof useContractRead> & {
 }
 
 export const useTokenData = (tokenId: number) => {
+  const address = process.env.NEXT_PUBLIC_LILNOUNS_TOKEN_CONTRACT ?? '';
+
   const result = useContractRead({
     address,
     abi,
@@ -24,16 +23,16 @@ export const useTokenData = (tokenId: number) => {
   }) as DataUriResult;
 
   return useMemo(() => {
-    if (!result) {
-      return undefined;
+    if (!result?.data) {
+      return;
     }
 
     try {
-      const json = Buffer.from(`${result?.data}`.substring(29), 'base64').toString();
+      const json = Buffer.from(`${result.data}`.substring(29), 'base64').toString();
       const data: TokenDataInterface = JSON.parse(json);
       return data;
-    } catch (e) {
-      console.error(e)
+    } catch (error) {
+      console.error(error);
     }
   }, [result])
 };
