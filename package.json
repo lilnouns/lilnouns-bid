@@ -15,7 +15,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.3",
     "@heroicons/react": "^2.0.12",
-    "@rainbow-me/rainbowkit": "^0.7.4",
+    "@rainbow-me/rainbowkit": "^0.8.0",
     "autoprefixer": "^10.4.9",
     "dayjs": "^1.11.6",
     "ethers": "^5.7.2",
