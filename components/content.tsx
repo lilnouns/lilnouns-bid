@@ -1,6 +1,4 @@
-import {useAuction, useTokenData} from "../hooks";
 import {Auction, ContentHero} from "./";
-import {BigNumber} from "ethers";
 
 type Props = {};
 
