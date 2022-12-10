@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-alpha.16] - 2022-12-10
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump next from 13.0.4 to 13.0.5 ([#48](https://github.com/orhun/git-cliff/issues/48))
+- Bump eslint-config-next from 13.0.4 to 13.0.5 ([#49](https://github.com/orhun/git-cliff/issues/49))
+- Bump @types/node from 18.11.9 to 18.11.10 ([#50](https://github.com/orhun/git-cliff/issues/50))
+- Bump @types/node from 18.11.10 to 18.11.11 ([#55](https://github.com/orhun/git-cliff/issues/55))
+- Bump typescript from 4.9.3 to 4.9.4 ([#56](https://github.com/orhun/git-cliff/issues/56))
+- Bump eslint-config-next from 13.0.4 to 13.0.6 ([#51](https://github.com/orhun/git-cliff/issues/51))
+- Bump @types/react from 18.0.25 to 18.0.26 ([#52](https://github.com/orhun/git-cliff/issues/52))
+- Bump next from 13.0.5 to 13.0.6 ([#54](https://github.com/orhun/git-cliff/issues/54))
+- Bump eslint from 8.28.0 to 8.29.0 ([#53](https://github.com/orhun/git-cliff/issues/53))
+
 ## [1.0.0-alpha.15] - 2022-11-22
 
 ### <!-- 01 -->Features
