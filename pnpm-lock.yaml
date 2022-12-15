@@ -10,7 +10,7 @@ specifiers:
   autoprefixer: ^10.4.13
   dayjs: ^1.11.6
   eslint: 8.29.0
-  eslint-config-next: 13.0.6
+  eslint-config-next: 13.0.7
   ethers: ^5.7.2
   graphql: ^16.6.0
   next: 13.0.6
@@ -52,7 +52,7 @@ devDependencies:
   '@types/react': 18.0.26
   '@types/react-dom': 18.0.9
   eslint: 8.29.0
-  eslint-config-next: 13.0.6_ha6vam6werchizxrnqvarmz2zu
+  eslint-config-next: 13.0.7_ha6vam6werchizxrnqvarmz2zu
   typescript: 4.9.4
   wrangler: 2.4.2
 
@@ -2115,8 +2115,8 @@ packages:
     resolution: {integrity: sha512-yceT6DCHKqPRS1cAm8DHvDvK74DLIkDQdm5iV+GnIts8h0QbdHvkUIkdOvQoOODgpr6018skbmSQp12z5OWIQQ==}
     dev: false
 
-  /@next/eslint-plugin-next/13.0.6:
-    resolution: {integrity: sha512-JUANdYNCddhmQBjQQPxEJYL7GMCqYtbfrdmtX7c013srig7waNCG69Aoql7CgAgjdy8jn1ovHVdcF/NB46XN3Q==}
+  /@next/eslint-plugin-next/13.0.7:
+    resolution: {integrity: sha512-Q/Z0V3D3UpKhhzFU6/s17wD4rqJ+ZDGded8UpqNyzX1nUdD+/PnsZexPhSIZ2Yf/c8QESeirmJVRb3eAfCQkRQ==}
     dependencies:
       glob: 7.1.7
     dev: true
@@ -4620,8 +4620,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-next/13.0.6_ha6vam6werchizxrnqvarmz2zu:
-    resolution: {integrity: sha512-Tfn/0lirhkEuoGxKMtDQNtQuC7P3eHcyUyhIJY/OHtjU9ExHFtcge/Fe8Ou/Jd7DIC71vN3CT72oszVwia71cg==}
+  /eslint-config-next/13.0.7_ha6vam6werchizxrnqvarmz2zu:
+    resolution: {integrity: sha512-X7DB7iDJ9iHi5DAZbnFdWm4M0dwarj5h5y6Vpm9INCYzFgAwSWslq3v0qjYEjtUO5IQ8n1WK6IU5FkOQ2HBhOA==}
     peerDependencies:
       eslint: ^7.23.0 || ^8.0.0
       typescript: '>=3.3.1'
@@ -4629,7 +4629,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@next/eslint-plugin-next': 13.0.6
+      '@next/eslint-plugin-next': 13.0.7
       '@rushstack/eslint-patch': 1.2.0
       '@typescript-eslint/parser': 5.44.0_ha6vam6werchizxrnqvarmz2zu
       eslint: 8.29.0
