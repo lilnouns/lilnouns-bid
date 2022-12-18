@@ -30,7 +30,7 @@
     "tailwindcss": "^3.2.4",
     "tilg": "^0.1.1",
     "urql": "^3.0.3",
-    "wagmi": "^0.8.6"
+    "wagmi": "^0.9.2"
   },
   "devDependencies": {
     "@types/node": "18.11.17",
