@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0] - 2023-01-02
+
+### <!-- 02 -->Bug Fixes
+
+- Migrate from `wagmi` version `8.x` to `9.x`
+
+### <!-- 07 -->Continuous Integrations
+
+- Bump actions/checkout from 3.1.0 to 3.2.0 ([#58](https://github.com/orhun/git-cliff/issues/58))
+- Skip running `pnpm` workflow on ci dependencies
+- Setup stale bot to closes abandoned issues
+- Add a new `release` workflow to create releases
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump eslint-config-next from 13.0.6 to 13.0.7 ([#61](https://github.com/orhun/git-cliff/issues/61))
+- Bump @types/node from 18.11.11 to 18.11.13 ([#57](https://github.com/orhun/git-cliff/issues/57))
+- Bump next from 13.0.6 to 13.0.7 ([#60](https://github.com/orhun/git-cliff/issues/60))
+- Bump eslint from 8.29.0 to 8.30.0 ([#62](https://github.com/orhun/git-cliff/issues/62))
+- Bump @types/node from 18.11.13 to 18.11.17 ([#63](https://github.com/orhun/git-cliff/issues/63))
+- Bump wagmi from 0.8.10 to 0.9.2 ([#59](https://github.com/orhun/git-cliff/issues/59))
+
 ## [1.0.0-alpha.16] - 2022-12-10
 
 ### <!-- 08 -->Miscellaneous Tasks
