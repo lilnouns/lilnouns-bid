@@ -3,14 +3,13 @@ import '../styles/globals.css'
 import type {AppProps} from 'next/app'
 import {DefaultSeo} from "next-seo";
 import SEO from '../next-seo.config';
-import {chain, configureChains, createClient, WagmiConfig} from "wagmi";
+import {configureChains, createClient, WagmiConfig} from "wagmi";
 import {infuraProvider} from 'wagmi/providers/infura'
 import {getDefaultWallets, RainbowKitProvider} from "@rainbow-me/rainbowkit";
 import {createClient as urqlCreatClient, Provider as UrqlProvider} from 'urql';
+import {goerli, mainnet} from 'wagmi/chains'
 
-const chainConfig = process.env.NODE_ENV === 'development'
-  ? [chain.goerli]
-  : [chain.mainnet];
+const chainConfig = process.env.NODE_ENV === 'development' ? [goerli] : [mainnet];
 
 const infuraApiKey = process.env.NEXT_PUBLIC_INFURA_API_KEY!;
 
