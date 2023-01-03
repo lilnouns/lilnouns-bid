@@ -19,7 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 17.x, 18.x, 19.x]
+        node-version: [16.x] #[16.x, 17.x, 18.x, 19.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -35,24 +35,24 @@ jobs:
           version: ^7
           run_install: false
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v3.0.11
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+      # - name: Get pnpm store directory
+        # id: pnpm-cache
+        # run: |
+          # echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
+#
+      # - uses: actions/cache@v3.0.11
+        # name: Setup pnpm cache
+        # with:
+          # path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          # key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          # restore-keys: |
+            # ${{ runner.os }}-pnpm-store-
 
       - name: Checkout
         uses: actions/checkout@v3.2.0
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build & export the app
         run: pnpm run export
