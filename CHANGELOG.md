@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 2023-01-04
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Update dependencies through `pnpm`
+
 ## [1.0.1] - 2023-01-04
 
 ### <!-- 05 -->Documentation
