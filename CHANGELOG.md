@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1] - 2023-01-04
+
+### <!-- 05 -->Documentation
+
+- Change the project license to`APLv2`
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump @types/react-dom from 18.0.9 to 18.0.10 ([#66](https://github.com/orhun/git-cliff/issues/66))
+- Bump eslint-config-next from 13.0.7 to 13.1.1 ([#69](https://github.com/orhun/git-cliff/issues/69))
+- Bump next from 13.0.7 to 13.1.1 ([#70](https://github.com/orhun/git-cliff/issues/70))
+- Bump @types/node from 18.11.17 to 18.11.18 ([#72](https://github.com/orhun/git-cliff/issues/72))
+- Bump eslint from 8.30.0 to 8.31.0 ([#73](https://github.com/orhun/git-cliff/issues/73))
+
 ## [1.0.0] - 2023-01-02
 
 ### <!-- 02 -->Bug Fixes
