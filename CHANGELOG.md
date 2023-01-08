@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2023-01-08
+
+### <!-- 07 -->Continuous Integrations
+
+- Bump actions/checkout from 3.1.0 to 3.2.0 ([#74](https://github.com/orhun/git-cliff/issues/74))
+- Bump actions/checkout from 3.2.0 to 3.3.0 ([#75](https://github.com/orhun/git-cliff/issues/75))
+- Bump actions/setup-node from 3.5.1 to 3.6.0 ([#76](https://github.com/orhun/git-cliff/issues/76))
+
 ## [1.0.2] - 2023-01-04
 
 ### <!-- 08 -->Miscellaneous Tasks
