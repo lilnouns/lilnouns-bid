@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.4] - 2023-01-08
+
+### <!-- 05 -->Documentation
+
+- Add some status badges to the readme file
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Add a link to the github repository to the header
+
 ## [1.0.3] - 2023-01-08
 
 ### <!-- 07 -->Continuous Integrations
