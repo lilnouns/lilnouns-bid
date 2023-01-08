@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.5] - 2023-01-08
+
+### <!-- 07 -->Continuous Integrations
+
+- Bump orhun/git-cliff-action from 2.0.1 to 2.0.2 
+
 ## [1.0.4] - 2023-01-08
 
 ### <!-- 05 -->Documentation
@@ -16,9 +22,9 @@ All notable changes to this project will be documented in this file.
 
 ### <!-- 07 -->Continuous Integrations
 
-- Bump actions/checkout from 3.1.0 to 3.2.0 ([#74](https://github.com/orhun/git-cliff/issues/74))
-- Bump actions/checkout from 3.2.0 to 3.3.0 ([#75](https://github.com/orhun/git-cliff/issues/75))
-- Bump actions/setup-node from 3.5.1 to 3.6.0 ([#76](https://github.com/orhun/git-cliff/issues/76))
+- Bump actions/checkout from 3.1.0 to 3.2.0 
+- Bump actions/checkout from 3.2.0 to 3.3.0 
+- Bump actions/setup-node from 3.5.1 to 3.6.0 
 
 ## [1.0.2] - 2023-01-04
 
@@ -34,11 +40,11 @@ All notable changes to this project will be documented in this file.
 
 ### <!-- 08 -->Miscellaneous Tasks
 
-- Bump @types/react-dom from 18.0.9 to 18.0.10 ([#66](https://github.com/orhun/git-cliff/issues/66))
-- Bump eslint-config-next from 13.0.7 to 13.1.1 ([#69](https://github.com/orhun/git-cliff/issues/69))
-- Bump next from 13.0.7 to 13.1.1 ([#70](https://github.com/orhun/git-cliff/issues/70))
-- Bump @types/node from 18.11.17 to 18.11.18 ([#72](https://github.com/orhun/git-cliff/issues/72))
-- Bump eslint from 8.30.0 to 8.31.0 ([#73](https://github.com/orhun/git-cliff/issues/73))
+- Bump @types/react-dom from 18.0.9 to 18.0.10 
+- Bump eslint-config-next from 13.0.7 to 13.1.1 
+- Bump next from 13.0.7 to 13.1.1 
+- Bump @types/node from 18.11.17 to 18.11.18 
+- Bump eslint from 8.30.0 to 8.31.0 
 
 ## [1.0.0] - 2023-01-02
 
@@ -48,33 +54,33 @@ All notable changes to this project will be documented in this file.
 
 ### <!-- 07 -->Continuous Integrations
 
-- Bump actions/checkout from 3.1.0 to 3.2.0 ([#58](https://github.com/orhun/git-cliff/issues/58))
+- Bump actions/checkout from 3.1.0 to 3.2.0 
 - Skip running `pnpm` workflow on ci dependencies
 - Setup stale bot to closes abandoned issues
 - Add a new `release` workflow to create releases
 
 ### <!-- 08 -->Miscellaneous Tasks
 
-- Bump eslint-config-next from 13.0.6 to 13.0.7 ([#61](https://github.com/orhun/git-cliff/issues/61))
-- Bump @types/node from 18.11.11 to 18.11.13 ([#57](https://github.com/orhun/git-cliff/issues/57))
-- Bump next from 13.0.6 to 13.0.7 ([#60](https://github.com/orhun/git-cliff/issues/60))
-- Bump eslint from 8.29.0 to 8.30.0 ([#62](https://github.com/orhun/git-cliff/issues/62))
-- Bump @types/node from 18.11.13 to 18.11.17 ([#63](https://github.com/orhun/git-cliff/issues/63))
-- Bump wagmi from 0.8.10 to 0.9.2 ([#59](https://github.com/orhun/git-cliff/issues/59))
+- Bump eslint-config-next from 13.0.6 to 13.0.7 
+- Bump @types/node from 18.11.11 to 18.11.13 
+- Bump next from 13.0.6 to 13.0.7 
+- Bump eslint from 8.29.0 to 8.30.0 
+- Bump @types/node from 18.11.13 to 18.11.17 
+- Bump wagmi from 0.8.10 to 0.9.2 
 
 ## [1.0.0-alpha.16] - 2022-12-10
 
 ### <!-- 08 -->Miscellaneous Tasks
 
-- Bump next from 13.0.4 to 13.0.5 ([#48](https://github.com/orhun/git-cliff/issues/48))
-- Bump eslint-config-next from 13.0.4 to 13.0.5 ([#49](https://github.com/orhun/git-cliff/issues/49))
-- Bump @types/node from 18.11.9 to 18.11.10 ([#50](https://github.com/orhun/git-cliff/issues/50))
-- Bump @types/node from 18.11.10 to 18.11.11 ([#55](https://github.com/orhun/git-cliff/issues/55))
-- Bump typescript from 4.9.3 to 4.9.4 ([#56](https://github.com/orhun/git-cliff/issues/56))
-- Bump eslint-config-next from 13.0.4 to 13.0.6 ([#51](https://github.com/orhun/git-cliff/issues/51))
-- Bump @types/react from 18.0.25 to 18.0.26 ([#52](https://github.com/orhun/git-cliff/issues/52))
-- Bump next from 13.0.5 to 13.0.6 ([#54](https://github.com/orhun/git-cliff/issues/54))
-- Bump eslint from 8.28.0 to 8.29.0 ([#53](https://github.com/orhun/git-cliff/issues/53))
+- Bump next from 13.0.4 to 13.0.5 
+- Bump eslint-config-next from 13.0.4 to 13.0.5 
+- Bump @types/node from 18.11.9 to 18.11.10 
+- Bump @types/node from 18.11.10 to 18.11.11 
+- Bump typescript from 4.9.3 to 4.9.4 
+- Bump eslint-config-next from 13.0.4 to 13.0.6 
+- Bump @types/react from 18.0.25 to 18.0.26 
+- Bump next from 13.0.5 to 13.0.6 
+- Bump eslint from 8.28.0 to 8.29.0 
 
 ## [1.0.0-alpha.15] - 2022-11-22
 
@@ -101,7 +107,7 @@ All notable changes to this project will be documented in this file.
 
 ### <!-- 08 -->Miscellaneous Tasks
 
-- Bump @rainbow-me/rainbowkit from 0.7.4 to 0.8.0 ([#47](https://github.com/orhun/git-cliff/issues/47))
+- Bump @rainbow-me/rainbowkit from 0.7.4 to 0.8.0 
 - Update dependencies and lock file
 
 ## [1.0.0-alpha.14] - 2022-11-20
@@ -114,12 +120,12 @@ All notable changes to this project will be documented in this file.
 
 ### <!-- 08 -->Miscellaneous Tasks
 
-- Bump next from 13.0.3 to 13.0.4 ([#43](https://github.com/orhun/git-cliff/issues/43))
-- Bump eslint-config-next from 13.0.3 to 13.0.4 ([#44](https://github.com/orhun/git-cliff/issues/44))
-- Bump @types/react-dom from 18.0.8 to 18.0.9 ([#41](https://github.com/orhun/git-cliff/issues/41))
-- Bump typescript from 4.8.4 to 4.9.3 ([#42](https://github.com/orhun/git-cliff/issues/42))
-- Bump eslint from 8.27.0 to 8.28.0 ([#45](https://github.com/orhun/git-cliff/issues/45))
-- Bump wagmi from 0.7.15 to 0.8.5 ([#46](https://github.com/orhun/git-cliff/issues/46))
+- Bump next from 13.0.3 to 13.0.4 
+- Bump eslint-config-next from 13.0.3 to 13.0.4 
+- Bump @types/react-dom from 18.0.8 to 18.0.9 
+- Bump typescript from 4.8.4 to 4.9.3 
+- Bump eslint from 8.27.0 to 8.28.0 
+- Bump wagmi from 0.7.15 to 0.8.5 
 - Specifiy node version of cloudflare pages
 
 ## [1.0.0-alpha.12] - 2022-11-13
@@ -184,20 +190,20 @@ All notable changes to this project will be documented in this file.
 - Add `ethers:5.7.2` to dependencies
 - Add `@rainbow-me/rainbowkit:0.7.4` to dependencies
 - Bump @types/node from 18.11.7 to 18.11.9
-- Bump eslint-config-next from 13.0.0 to 13.0.1 ([#31](https://github.com/orhun/git-cliff/issues/31))
-- Bump next from 13.0.0 to 13.0.1 ([#32](https://github.com/orhun/git-cliff/issues/32))
+- Bump eslint-config-next from 13.0.0 to 13.0.1 
+- Bump next from 13.0.0 to 13.0.1 
 - Add a json reference file for lilnouns token contract
 - Add a json reference file for lilnouns auction contract
 - Add `react-use:17.4.0` to dependencies
 - Add `tilg:0.1.1` to dependencies
-- Bump next from 13.0.1 to 13.0.2 ([#33](https://github.com/orhun/git-cliff/issues/33))
-- Bump eslint-config-next from 13.0.1 to 13.0.2 ([#34](https://github.com/orhun/git-cliff/issues/34))
-- Bump @types/react from 18.0.24 to 18.0.25 ([#35](https://github.com/orhun/git-cliff/issues/35))
-- Bump wagmi from 0.7.15 to 0.8.1 ([#37](https://github.com/orhun/git-cliff/issues/37))
-- Bump eslint from 8.26.0 to 8.27.0 ([#36](https://github.com/orhun/git-cliff/issues/36))
+- Bump next from 13.0.1 to 13.0.2 
+- Bump eslint-config-next from 13.0.1 to 13.0.2 
+- Bump @types/react from 18.0.24 to 18.0.25 
+- Bump wagmi from 0.7.15 to 0.8.1 
+- Bump eslint from 8.26.0 to 8.27.0 
 - Update `pnpm` lockfile state
-- Bump next from 13.0.2 to 13.0.3 ([#38](https://github.com/orhun/git-cliff/issues/38))
-- Bump eslint-config-next from 13.0.2 to 13.0.3 ([#39](https://github.com/orhun/git-cliff/issues/39))
+- Bump next from 13.0.2 to 13.0.3 
+- Bump eslint-config-next from 13.0.2 to 13.0.3 
 - Add `dayjs:1.11.6` to dependencies
 - Add `urql` and `graphql` to dependencies
 
