@@ -6,6 +6,7 @@ import {ConnectButton, ConnectMenu} from "./";
 const navigation = [
   {name: 'Home', href: '/'},
   {name: 'Discord', href: 'https://discord.com/channels/954142017556979752/1011648759630930010'},
+  { name: 'GitHub', href: 'https://github.com/lilnouns/lilnouns-bid' },
 ]
 
 type Props = {};
