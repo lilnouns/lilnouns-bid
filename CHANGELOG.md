@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.6] - 2023-01-14
+
+### <!-- 07 -->Continuous Integrations
+
+- Bump actions/cache from 3.0.11 to 3.2.3 
+- Bump orhun/git-cliff-action from 2.0.2 to 2.0.3 
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump next from 13.1.1 to 13.1.2 
+- Bump eslint-config-next from 13.1.1 to 13.1.2 
+
 ## [1.0.5] - 2023-01-08
 
 ### <!-- 07 -->Continuous Integrations
