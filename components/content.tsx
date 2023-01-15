@@ -4,7 +4,7 @@ type Props = {};
 
 export const Content = ({}: Props) => {
   return (
-    <main className="mt-16 mx-auto max-w-5xl px-4 sm:mt-24 min-h-screen">
+    <main className="tw-mt-16 tw-mx-auto tw-max-w-5xl tw-px-4 sm:tw-mt-24 tw-min-h-screen">
       <ContentHero/>
 
       <section>

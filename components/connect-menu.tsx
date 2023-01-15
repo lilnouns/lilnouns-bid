@@ -27,7 +27,7 @@ export const ConnectMenu = ({}: Props) => {
 
           return (
             <a
-              className="block w-full px-5 py-3 text-center font-medium text-neutral-600 bg-gray-50 hover:bg-gray-100 cursor-pointer"
+              className="tw-block tw-w-full tw-px-5 tw-py-3 tw-text-center tw-font-medium tw-text-neutral-600 tw-bg-gray-50 hover:tw-bg-gray-100 tw-cursor-pointer"
               {...(!ready && {
                 'aria-hidden': true,
                 'style': {

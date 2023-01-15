@@ -34,8 +34,8 @@ export function SettleButton() {
       disabled={isDisabled}
       onClick={buttonHandler}
       className={classNames(
-        isDisabled ? "opacity-50 cursor-not-allowed" : "hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-neutral-500",
-        "w-full bg-neutral-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white"
+        isDisabled ? "tw-opacity-50 tw-cursor-not-allowed" : "hover:tw-bg-neutral-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-offset-gray-50 focus:tw-ring-neutral-500",
+        "tw-w-full tw-bg-neutral-600 tw-border tw-border-transparent tw-rounded-md tw-py-3 tw-px-8 tw-flex tw-items-center tw-justify-center tw-text-base tw-font-medium tw-text-white"
       )}
     >
       Settle Now

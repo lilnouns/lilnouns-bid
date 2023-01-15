@@ -38,28 +38,28 @@ export const Auction = ({}: Props) => {
   }, [auction, averageBid, bestBid, isIdle, types])
 
   return (
-    <div className="bg-white overflow-hidden shadow rounded-lg">
+    <div className="tw-bg-white tw-overflow-hidden tw-shadow tw-rounded-lg">
       <div
-        className="max-w-2xl mx-auto py-8 px-4 sm:py-8 sm:px-6 lg:max-w-5xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
+        className="tw-max-w-2xl tw-mx-auto tw-py-8 tw-px-4 sm:tw-py-8 sm:tw-px-6 lg:tw-max-w-5xl lg:tw-px-8 lg:tw-grid lg:tw-grid-cols-2 lg:tw-gap-x-8">
         {/* Auction details */}
-        <div className="lg:max-w-lg lg:self-end">
+        <div className="lg:tw-max-w-lg lg:tw-self-end">
 
-          <div className="mt-4">
-            <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{tokenData?.name}</h1>
+          <div className="tw-mt-4">
+            <h1 className="tw-text-3xl tw-font-extrabold tw-tracking-tight tw-text-gray-900 sm:tw-text-4xl">{tokenData?.name}</h1>
           </div>
 
-          <section aria-labelledby="information-heading" className="mt-4">
-            <h2 id="information-heading" className="sr-only">
+          <section aria-labelledby="information-heading" className="tw-mt-4">
+            <h2 id="information-heading" className="tw-sr-only">
               Auction information
             </h2>
 
-            <div className="flex items-center">
+            <div className="tw-flex tw-items-center">
               <p
-                className="text-lg text-gray-900 sm:text-xl">{formatUnits(auction?.amount ?? "0", "ether")} Ξ</p>
+                className="tw-text-lg tw-text-gray-900 sm:tw-text-xl">{formatUnits(auction?.amount ?? "0", "ether")} Ξ</p>
             </div>
 
-            <div className="mt-4 space-y-6">
-              <p className="text-base text-gray-500">
+            <div className="tw-mt-4 tw-space-y-6">
+              <p className="tw-text-base tw-text-gray-500">
                 Choose one of the options below and then register your offer. The best offer will be automatically
                 calculated and will be calculated after your approval over your wallet.
               </p>
@@ -69,29 +69,29 @@ export const Auction = ({}: Props) => {
         </div>
 
         {/* Auction image */}
-        <div className="mt-10 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-center">
-          <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
-            <img src={tokenData?.image} alt={tokenData?.name} className="w-full h-full object-center object-cover"/>
+        <div className="tw-mt-10 lg:tw-mt-0 lg:tw-col-start-2 lg:tw-row-span-2 lg:tw-self-center">
+          <div className="tw-aspect-w-1 tw-aspect-h-1 tw-rounded-lg tw-overflow-hidden">
+            <img src={tokenData?.image} alt={tokenData?.name} className="tw-w-full tw-h-full tw-object-center tw-object-cover"/>
           </div>
         </div>
 
         {/* Auction form */}
-        <div className="mt-10 lg:max-w-lg lg:col-start-1 lg:row-start-2 lg:self-start">
+        <div className="tw-mt-10 lg:tw-max-w-lg lg:tw-col-start-1 lg:tw-row-start-2 lg:tw-self-start">
           <section aria-labelledby="options-heading">
-            <h2 id="options-heading" className="sr-only">
+            <h2 id="options-heading" className="tw-sr-only">
               Auction options
             </h2>
 
             <form>
-              <div className="sm:flex sm:justify-between">
+              <div className="sm:tw-flex sm:tw-justify-between">
                 {/* Type selector */}
                 <RadioGroup
                   value={selectedType}
                   onChange={setSelectedType}
                   disabled={auctionState !== AuctionState.ACTIVE}
                 >
-                  <RadioGroup.Label className="block text-sm font-medium text-gray-700">Type</RadioGroup.Label>
-                  <div className="mt-1 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <RadioGroup.Label className="tw-block tw-text-sm tw-font-medium tw-text-gray-700">Type</RadioGroup.Label>
+                  <div className="tw-mt-1 tw-grid tw-grid-cols-1 tw-gap-4 sm:tw-grid-cols-2">
                     {types.map((type, index) => (
                       <RadioGroup.Option
                         as="div"
@@ -99,24 +99,24 @@ export const Auction = ({}: Props) => {
                         value={type}
                         className={({active}) =>
                           classNames(
-                            active ? 'ring-2 ring-neutral-500' : '',
-                            'relative block border border-gray-300 rounded-lg p-4 cursor-pointer focus:outline-none'
+                            active ? 'tw-ring-2 tw-ring-neutral-500' : '',
+                            'tw-relative tw-block tw-border tw-border-gray-300 tw-rounded-lg tw-p-4 tw-cursor-pointer focus:tw-outline-none'
                           )
                         }
                       >
                         {({active, checked}) => (
                           <>
-                            <RadioGroup.Label as="p" className="text-base font-medium text-gray-900">
+                            <RadioGroup.Label as="p" className="tw-text-base tw-font-medium tw-text-gray-900">
                               {type.name}
                             </RadioGroup.Label>
-                            <RadioGroup.Description as="p" className="mt-1 text-sm text-gray-500">
+                            <RadioGroup.Description as="p" className="tw-mt-1 tw-text-sm tw-text-gray-500">
                               {type.description}
                             </RadioGroup.Description>
                             <div
                               className={classNames(
-                                active ? 'border' : 'border-2',
-                                checked ? 'border-neutral-500' : 'border-transparent',
-                                'absolute -inset-px rounded-lg pointer-events-none'
+                                active ? 'tw-border' : 'tw-border-2',
+                                checked ? 'tw-border-neutral-500' : 'tw-border-transparent',
+                                'tw-absolute -tw-inset-px tw-rounded-lg tw-pointer-events-none'
                               )}
                               aria-hidden="true"
                             />
@@ -128,7 +128,7 @@ export const Auction = ({}: Props) => {
                 </RadioGroup>
               </div>
 
-              <div className="mt-10">
+              <div className="tw-mt-10">
                 {auctionState === AuctionState.ACTIVE && <BidButton nounId={auction?.nounId} amount={amount}/>}
                 {auctionState === AuctionState.OVER_NOT_SETTLED && <SettleButton/>}
               </div>
