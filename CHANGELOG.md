@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 2023-01-16
+
+### <!-- 01 -->Features
+
+- Add `tailwind` class names obfuscation by `webpack`
+
+### <!-- 04 -->Refactor
+
+- Add missing `tw-` prefix for css classes
+- Replace `classNames` functions by `clsx`
+
+### <!-- 07 -->Continuous Integrations
+
+- Change `open-pull-requests-limit` from 10 to 20
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Add `mangle-css-class-webpack-plugin` to dependencies
+- Add `clsx` to dependencies
+
 ## [1.0.6] - 2023-01-14
 
 ### <!-- 07 -->Continuous Integrations
