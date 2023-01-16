@@ -17,6 +17,7 @@
     "@heroicons/react": "^2.0.13",
     "@rainbow-me/rainbowkit": "^0.8.1",
     "autoprefixer": "^10.4.13",
+    "clsx": "1.2.1",
     "dayjs": "^1.11.7",
     "ethers": "^5.7.2",
     "graphql": "^16.6.0",
