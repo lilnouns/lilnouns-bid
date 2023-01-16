@@ -27,7 +27,7 @@ export const ConnectButton = ({}: Props) => {
 
           return (
             <span
-              className="inline-flex rounded-md shadow cursor-pointer"
+              className="tw-inline-flex tw-rounded-md tw-shadow tw-cursor-pointer"
               {...(!ready && {
                 'aria-hidden': true,
                 'style': {
@@ -42,7 +42,7 @@ export const ConnectButton = ({}: Props) => {
                     return (
                       <a
                         onClick={openConnectModal}
-                        className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-neutral-600 bg-white hover:bg-gray-50"
+                        className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 border tw-border-transparent tw-text-base tw-font-medium tw-rounded-md tw-text-neutral-600 tw-bg-white tw-hover:bg-gray-50"
                       >
                         Log in
                       </a>
@@ -53,7 +53,7 @@ export const ConnectButton = ({}: Props) => {
                     return (
                       <a
                         onClick={openChainModal}
-                        className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-neutral-600 bg-white hover:bg-gray-50"
+                        className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-text-base tw-font-medium tw-rounded-md tw-text-neutral-600 tw-bg-white hover:tw-bg-gray-50"
                       >
                         Wrong network
                       </a>
@@ -64,7 +64,7 @@ export const ConnectButton = ({}: Props) => {
                     <>
                       {/*<a
                         onClick={openChainModal}
-                        className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-neutral-600 bg-white hover:bg-gray-50"
+                        className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-text-base tw-font-medium tw-rounded-md tw-text-neutral-600 tw-bg-white hover:tw-bg-gray-50"
                       >
                         {chain.hasIcon && (
                           <div
@@ -91,7 +91,7 @@ export const ConnectButton = ({}: Props) => {
 
                       <a
                         onClick={openAccountModal}
-                        className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-neutral-600 bg-white hover:bg-gray-50"
+                        className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-text-base tw-font-medium tw-rounded-md tw-text-neutral-600 tw-bg-white hover:tw-bg-gray-50"
                       >
                         {account.displayName}
                         {account.displayBalance
