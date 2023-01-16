@@ -69,18 +69,18 @@ type Props = {};
 
 export const Footer = ({}: Props) => {
   return (
-    <footer className="bg-gray-100">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
-        <div className="flex justify-center space-x-6 md:order-2">
+    <footer className="tw-bg-gray-100">
+      <div className="tw-max-w-7xl tw-mx-auto tw-py-12 tw-px-4 sm:tw-px-6 md:tw-flex md:tw-items-center md:tw-justify-between lg:tw-px-8">
+        <div className="tw-flex tw-justify-center tw-space-x-6 md:tw-order-2">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
-              <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true"/>
+            <a key={item.name} href={item.href} className="tw-text-gray-400 hover:tw-text-gray-500">
+              <span className="tw-sr-only">{item.name}</span>
+              <item.icon className="tw-h-6 tw-w-6" aria-hidden="true"/>
             </a>
           ))}
         </div>
-        <div className="mt-8 md:mt-0 md:order-1">
-          <p className="text-center text-base text-gray-400">&copy; 2022 Lil Nouns. No rights reserved.</p>
+        <div className="tw-mt-8 md:tw-mt-0 md:tw-order-1">
+          <p className="tw-text-center tw-text-base tw-text-gray-400">&copy; 2022 Lil Nouns. No rights reserved.</p>
         </div>
       </div>
     </footer>
