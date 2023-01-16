@@ -6,12 +6,9 @@ import {BigNumber} from "ethers";
 import {SettleButton} from "./settle-button";
 import {BidButton} from "./bid-button";
 import {formatEther, formatUnits} from "ethers/lib/utils";
+import clsx from "clsx";
 
 type Props = {};
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export const Auction = ({}: Props) => {
   const isIdle = useIdle(60e3);
@@ -98,7 +95,7 @@ export const Auction = ({}: Props) => {
                         key={index}
                         value={type}
                         className={({active}) =>
-                          classNames(
+                          clsx(
                             active ? 'tw-ring-2 tw-ring-neutral-500' : '',
                             'tw-relative tw-block tw-border tw-border-gray-300 tw-rounded-lg tw-p-4 tw-cursor-pointer focus:tw-outline-none'
                           )
@@ -113,7 +110,7 @@ export const Auction = ({}: Props) => {
                               {type.description}
                             </RadioGroup.Description>
                             <div
-                              className={classNames(
+                              className={clsx(
                                 active ? 'tw-border' : 'tw-border-2',
                                 checked ? 'tw-border-neutral-500' : 'tw-border-transparent',
                                 'tw-absolute -tw-inset-px tw-rounded-lg tw-pointer-events-none'

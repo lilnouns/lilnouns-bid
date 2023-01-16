@@ -2,10 +2,7 @@ import {MouseEvent, useEffect, useState} from "react";
 import {useAccount, useContractWrite, usePrepareContractWrite} from "wagmi";
 import abi from "../../json/lilnouns-auction.json";
 import {BigNumber} from "ethers";
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
+import clsx from "clsx";
 
 type Props = {
   nounId?: BigNumber
@@ -41,7 +38,7 @@ export function BidButton({nounId, amount}: Props) {
       type="submit"
       disabled={isDisabled}
       onClick={buttonHandler}
-      className={classNames(
+      className={clsx(
         isDisabled ? "tw-opacity-50 tw-cursor-not-allowed" : "tw-hover:bg-neutral-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-offset-gray-50 focus:tw-ring-neutral-500",
         "tw-w-full tw-bg-neutral-600 tw-border tw-border-transparent tw-rounded-md tw-py-3 tw-px-8 tw-flex tw-items-center tw-justify-center tw-text-base tw-font-medium tw-text-white"
       )}
