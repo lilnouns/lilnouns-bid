@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.1] - 2023-01-22
+
+### <!-- 02 -->Bug Fixes
+
+- Improve regex rules for `mangle-css-class-webpack-plugin`
+
+### <!-- 05 -->Documentation
+
+- Add issue templates for bug report and feature requests
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Replace exact versions instead of carrot
+- Change `save-prefix` from carrot to exact version
+- Bump eslint from 8.31.0 to 8.32.0 
+- Bump postcss from 8.4.20 to 8.4.21 
+- Bump wrangler from 2.6.2 to 2.7.1 
+- Bump next-sitemap from 3.1.44 to 3.1.45 
+
 ## [1.1.0] - 2023-01-16
 
 ### <!-- 01 -->Features
