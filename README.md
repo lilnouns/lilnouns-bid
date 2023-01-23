@@ -3,7 +3,7 @@
 [![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/lilnouns/lilnouns-bid?include_prereleases)](https://github.com/lilnouns/lilnouns-bid/releases)
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/lilnouns/lilnouns-bid/build.yml)](https://github.com/lilnouns/lilnouns-bid/actions/workflows/build.yml)
 [![GitHub](https://img.shields.io/github/license/lilnouns/lilnouns-bid)](https://github.com/lilnouns/lilnouns-bid/blob/master/LICENSE)
-[![Twitter Follow](https://img.shields.io/twitter/follow/nekofar?style=flat)](https://twitter.com/nekofar)
+[![Twitter Follow](https://img.shields.io/badge/follow-%40nekofar-1DA1F2?logo=twitter&style=flat)](https://twitter.com/nekofar)
 
 Bid faster and more efficient for bidding on auction.
 
