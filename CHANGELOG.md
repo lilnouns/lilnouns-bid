@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.2] - 2023-01-23
+
+### <!-- 05 -->Documentation
+
+- Add basic guidelines to contributing to the repository
+- Update twitter badge due to depreciation
+
 ## [1.1.1] - 2023-01-22
 
 ### <!-- 02 -->Bug Fixes
