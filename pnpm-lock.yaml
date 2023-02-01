@@ -11,14 +11,14 @@ specifiers:
   clsx: 1.2.1
   dayjs: 1.11.7
   eslint: 8.33.0
-  eslint-config-next: 13.1.2
+  eslint-config-next: 13.1.6
   ethers: 5.7.2
   graphql: 16.6.0
   incstr: 1.2.3
   mangle-css-class-webpack-plugin: 5.0.9
   next: 13.1.6
   next-seo: 5.15.0
-  next-sitemap: 3.1.45
+  next-sitemap: 3.1.49
   postcss: 8.4.21
   react: 18.2.0
   react-dom: 18.2.0
@@ -41,7 +41,7 @@ dependencies:
   graphql: 16.6.0
   next: 13.1.6_7xlrwlvvs7cv2obrs6a5y6oxxq
   next-seo: 5.15.0_3vryta7zmbcsw4rrqf4axjqggm
-  next-sitemap: 3.1.45_dlcnecpznf2wc36zwuq5m2ie5q
+  next-sitemap: 3.1.49_dlcnecpznf2wc36zwuq5m2ie5q
   postcss: 8.4.21
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -56,7 +56,7 @@ devDependencies:
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
   eslint: 8.33.0
-  eslint-config-next: 13.1.2_4vsywjlpuriuw3tl5oq6zy5a64
+  eslint-config-next: 13.1.6_4vsywjlpuriuw3tl5oq6zy5a64
   incstr: 1.2.3
   mangle-css-class-webpack-plugin: 5.0.9
   typescript: 4.9.5
@@ -1005,8 +1005,8 @@ packages:
     resolution: {integrity: sha512-s+W9Fdqh5MFk6ECrbnVmmAOwxKQuhGMT7xXHrkYIBMBcTiOqNWhv5KbJIboKR5STXxNXl32hllnvKaffzFaWQg==}
     dev: false
 
-  /@next/eslint-plugin-next/13.1.2:
-    resolution: {integrity: sha512-WGaNVvIYphdriesP6r7jq/8l7u38tzotnVQuxc1RYKLqYYApSsrebti3OCPoT3Gx0pw2smPIFHH98RzcsgW5GQ==}
+  /@next/eslint-plugin-next/13.1.6:
+    resolution: {integrity: sha512-o7cauUYsXjzSJkay8wKjpKJf2uLzlggCsGUkPu3lP09Pv97jYlekTC20KJrjQKmSv5DXV0R/uks2ZXhqjNkqAw==}
     dependencies:
       glob: 7.1.7
     dev: true
@@ -2903,8 +2903,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-next/13.1.2_4vsywjlpuriuw3tl5oq6zy5a64:
-    resolution: {integrity: sha512-zdRAQOr8v69ZwJRtBrGqAqm160ONqKxU/pV1FB1KlgfyqveGsLZmlQ7l31otwtw763901J7xdiTVkj2y3YxXZA==}
+  /eslint-config-next/13.1.6_4vsywjlpuriuw3tl5oq6zy5a64:
+    resolution: {integrity: sha512-0cg7h5wztg/SoLAlxljZ0ZPUQ7i6QKqRiP4M2+MgTZtxWwNKb2JSwNc18nJ6/kXBI6xYvPraTbQSIhAuVw6czw==}
     peerDependencies:
       eslint: ^7.23.0 || ^8.0.0
       typescript: '>=3.3.1'
@@ -2912,7 +2912,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@next/eslint-plugin-next': 13.1.2
+      '@next/eslint-plugin-next': 13.1.6
       '@rushstack/eslint-patch': 1.2.0
       '@typescript-eslint/parser': 5.48.0_4vsywjlpuriuw3tl5oq6zy5a64
       eslint: 8.33.0
@@ -4361,8 +4361,8 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /next-sitemap/3.1.45_dlcnecpznf2wc36zwuq5m2ie5q:
-    resolution: {integrity: sha512-8vyvWC8KT8RIEUL9Vfiae9yGuIIiJ1IpepzbFtwZx43BaKsoi/Zk9OlmPKuQouVY726xwN7uLZPtgl2l2U+9Ug==}
+  /next-sitemap/3.1.49_dlcnecpznf2wc36zwuq5m2ie5q:
+    resolution: {integrity: sha512-bxBq+MQdi580PKn/8ert4X0RL8Kp9scvyiq6TmIpkCQC3bd4DResTyxHY2AuCGKz83ut2udHwKMZu3ztj3aq3w==}
     engines: {node: '>=14.18'}
     hasBin: true
     peerDependencies:
