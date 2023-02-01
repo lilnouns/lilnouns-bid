@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.3] - 2023-02-01
+
+### <!-- 02 -->Bug Fixes
+
+- Solve some minor issues and update dependencies
+
+### <!-- 07 -->Continuous Integrations
+
+- Bump actions/cache from 3.2.3 to 3.2.4 
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump @heroicons/react from 2.0.13 to 2.0.14 
+- Bump wrangler from 2.7.1 to 2.8.0 
+- Bump @types/react from 18.0.26 to 18.0.27 
+- Bump eslint from 8.32.0 to 8.33.0 
+- Bump @headlessui/react from 1.7.7 to 1.7.8 
+- Bump next from 13.1.2 to 13.1.6 
+- Bump wrangler from 2.8.0 to 2.9.0 
+- Bump next-sitemap from 3.1.45 to 3.1.49 
+- Bump typescript from 4.9.4 to 4.9.5 
+
 ## [1.1.2] - 2023-01-23
 
 ### <!-- 05 -->Documentation
