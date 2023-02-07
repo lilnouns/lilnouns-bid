@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.4] - 2023-02-07
+
+### <!-- 02 -->Bug Fixes
+
+- Solve some type issues after dependency updates
+
+### <!-- 07 -->Continuous Integrations
+
+- Bump orhun/git-cliff-action from 2.0.3 to 2.0.5 
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump eslint-config-next from 13.1.2 to 13.1.6 
+- Bump @types/node from 18.11.18 to 18.11.19 
+- Bump wrangler from 2.9.0 to 2.9.1 
+- Bump next-sitemap from 3.1.49 to 3.1.50 
+- Bump @headlessui/react from 1.7.8 to 1.7.10 
+- Bump @headlessui/react from 1.7.8 to 1.7.10 
+- Bump @types/node from 18.11.19 to 18.13.0 
+- Bump wagmi from 0.9.6 to 0.11.3 
+
 ## [1.1.3] - 2023-02-01
 
 ### <!-- 02 -->Bug Fixes

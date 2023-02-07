@@ -1,4 +1,4 @@
-import {useContractRead} from "wagmi";
+import {Address, useContractRead} from "wagmi";
 import abi from "../json/lilnouns-auction.json";
 import {BigNumber} from "ethers";
 import {useMemo} from "react";
@@ -17,7 +17,7 @@ export type AuctionResult = ReturnType<typeof useContractRead> & {
 };
 
 export const useAuction = () => {
-  const address = process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT ?? '';
+  const address = process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT as Address;
 
   const result = useContractRead({
     address,
