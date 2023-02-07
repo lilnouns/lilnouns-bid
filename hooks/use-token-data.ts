@@ -1,4 +1,4 @@
-import {useContractRead} from "wagmi";
+import {Address, useContractRead} from "wagmi";
 import abi from "../json/lilnouns-token.json";
 import {useMemo} from "react";
 
@@ -13,7 +13,7 @@ export type DataUriResult = ReturnType<typeof useContractRead> & {
 }
 
 export const useTokenData = (tokenId: number) => {
-  const address = process.env.NEXT_PUBLIC_LILNOUNS_TOKEN_CONTRACT ?? '';
+  const address = process.env.NEXT_PUBLIC_LILNOUNS_TOKEN_CONTRACT as Address;
 
   const result = useContractRead({
     address,

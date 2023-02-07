@@ -1,4 +1,4 @@
-import {useContractRead} from "wagmi";
+import {Address, useContractRead} from "wagmi";
 import abi from "../json/lilnouns-auction.json";
 import {useMemo} from "react";
 import {BigNumber} from "ethers";
@@ -8,7 +8,7 @@ export type ReservePriceResult = ReturnType<typeof useContractRead> & {
 }
 
 export const useReservePrice = () => {
-  const address = process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT ?? '';
+  const address = process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT as Address;
 
   const result = useContractRead({
     address,
