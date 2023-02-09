@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@headlessui/react': 1.7.10
-  '@heroicons/react': 2.0.14
+  '@heroicons/react': 2.0.15
   '@rainbow-me/rainbowkit': 0.8.1
   '@types/node': 18.13.0
   '@types/react': 18.0.27
@@ -32,7 +32,7 @@ specifiers:
 
 dependencies:
   '@headlessui/react': 1.7.10_biqbaboplfbrettd7655fr4n2y
-  '@heroicons/react': 2.0.14_react@18.2.0
+  '@heroicons/react': 2.0.15_react@18.2.0
   '@rainbow-me/rainbowkit': 0.8.1_amd2vhu6wj5bwjc7z6fg5hhc6m
   autoprefixer: 10.4.13_postcss@8.4.21
   clsx: 1.2.1
@@ -921,8 +921,8 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /@heroicons/react/2.0.14_react@18.2.0:
-    resolution: {integrity: sha512-eFL4if6L7woL1fUvk/jjXx4z9NxVESHHrQnEd2qKVelTFTIr/3VLGWdPb0biia9ZVe26P0JSs/xmOlRNur3SrQ==}
+  /@heroicons/react/2.0.15_react@18.2.0:
+    resolution: {integrity: sha512-CZ2dGWgWG3/z5LEoD5D3MEr1syn45JM/OB2aDpw531Ryecgkz2V7TWQ808P0lva7zP003PVW6WlwbofsYyga3A==}
     peerDependencies:
       react: '>= 16'
     dependencies:
