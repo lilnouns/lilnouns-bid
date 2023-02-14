@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.6] - 2023-02-14
+
+### <!-- 07 -->Continuous Integrations
+
+- Bump actions/cache from 3.2.4 to 3.2.5 
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump tailwindcss from 3.2.4 to 3.2.6 
+- Bump @heroicons/react from 2.0.14 to 2.0.15 
+- Bump next-sitemap from 3.1.50 to 3.1.52 
+- Bump eslint from 8.33.0 to 8.34.0 
+- Bump ethers from 5.7.2 to 6.0.3 
+- Bump @types/react from 18.0.27 to 18.0.28 
+
+## [1.1.5] - 2023-02-07
+
+### <!-- 02 -->Bug Fixes
+
+- Downgrade to `wagmi` due to conflict with `rainbowkit`
+
 ## [1.1.4] - 2023-02-07
 
 ### <!-- 02 -->Bug Fixes
