@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.7] - 2023-02-18
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump tailwindcss from 3.2.6 to 3.2.7 
+- Bump wrangler from 2.9.1 to 2.10.0 
+- Bump @headlessui/react from 1.7.10 to 1.7.11 
+- Bump @types/react-dom from 18.0.10 to 18.0.11 
+
 ## [1.1.6] - 2023-02-14
 
 ### <!-- 07 -->Continuous Integrations
