@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@headlessui/react': 1.7.10
+  '@headlessui/react': 1.7.11
   '@heroicons/react': 2.0.15
   '@rainbow-me/rainbowkit': 0.8.1
   '@types/node': 18.13.0
@@ -31,7 +31,7 @@ specifiers:
   wrangler: 2.10.0
 
 dependencies:
-  '@headlessui/react': 1.7.10_biqbaboplfbrettd7655fr4n2y
+  '@headlessui/react': 1.7.11_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': 2.0.15_react@18.2.0
   '@rainbow-me/rainbowkit': 0.8.1_iindursl2cmc453o4vtk5eehii
   autoprefixer: 10.4.13_postcss@8.4.21
@@ -909,8 +909,8 @@ packages:
       '@ethersproject/strings': 5.7.0
     dev: false
 
-  /@headlessui/react/1.7.10_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-1m66h/5eayTEZVT2PI13/2PG3EVC7a9XalmUtVSC8X76pcyKYMuyX1XAL2RUtCr8WhoMa/KrDEyoeU5v+kSQOw==}
+  /@headlessui/react/1.7.11_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-EaDbVgcyiylhtskZZf4Qb/JiiByY7cYbd0qgZ9xm2pm2X7hKojG0P4TaQYKgPOV3vojPhd/pZyQh3nmRkkcSyw==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16 || ^17 || ^18
