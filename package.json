@@ -1,6 +1,6 @@
 {
   "name": "lilnouns-bid",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,7 +13,7 @@
     "export": "next export"
   },
   "dependencies": {
-    "@headlessui/react": "1.7.10",
+    "@headlessui/react": "1.7.11",
     "@heroicons/react": "2.0.15",
     "@rainbow-me/rainbowkit": "0.8.1",
     "autoprefixer": "10.4.13",
@@ -28,7 +28,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-use": "17.4.0",
-    "tailwindcss": "3.2.6",
+    "tailwindcss": "3.2.7",
     "tilg": "0.1.1",
     "urql": "3.0.3",
     "wagmi": "0.9.6"
@@ -36,12 +36,12 @@
   "devDependencies": {
     "@types/node": "18.13.0",
     "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.10",
+    "@types/react-dom": "18.0.11",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "incstr": "1.2.3",
     "mangle-css-class-webpack-plugin": "5.0.9",
     "typescript": "4.9.5",
-    "wrangler": "2.9.1"
+    "wrangler": "2.10.0"
   }
 }
