@@ -13,7 +13,7 @@
     "export": "next export"
   },
   "dependencies": {
-    "@headlessui/react": "1.7.12",
+    "@headlessui/react": "1.7.13",
     "@heroicons/react": "2.0.16",
     "@rainbow-me/rainbowkit": "0.9.0",
     "autoprefixer": "10.4.13",
