@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.9] - 2023-03-29
+
+### <!-- 07 -->Continuous Integrations
+
+- Bump actions/cache from 3.2.6 to 3.3.1 
+- Bump actions/checkout from 3.3.0 to 3.5.0 
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Improve `classNameRegExp` for `tailwind` class names
+- Bump next-sitemap from 3.1.55 to 4.0.1 
+- Bump @types/node from 18.14.4 to 18.14.5 
+- Bump @headlessui/react from 1.7.12 to 1.7.13 
+- Bump wrangler from 2.12.0 to 2.12.1 
+- Bump urql from 3.0.3 to 3.0.4 
+- Bump autoprefixer from 10.4.13 to 10.4.14 
+- Bump eslint-config-next from 13.2.3 to 13.2.4 
+- Bump next from 13.2.3 to 13.2.4 
+- Update `pnpm` lockfile state
+
 ## [1.1.8] - 2023-03-02
 
 ### <!-- 07 -->Continuous Integrations
