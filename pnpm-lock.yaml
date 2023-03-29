@@ -26,7 +26,7 @@ specifiers:
   tailwindcss: 3.2.7
   tilg: 0.1.1
   typescript: 4.9.5
-  urql: 3.0.3
+  urql: 3.0.4
   wagmi: 0.9.6
   wrangler: 2.12.1
 
@@ -48,7 +48,7 @@ dependencies:
   react-use: 17.4.0_biqbaboplfbrettd7655fr4n2y
   tailwindcss: 3.2.7_postcss@8.4.21
   tilg: 0.1.1_react@18.2.0
-  urql: 3.0.3_onqnqwb3ubg5opvemcqf7c2qhy
+  urql: 3.0.4_onqnqwb3ubg5opvemcqf7c2qhy
   wagmi: 0.9.6_cuhtghmdhamswzj22tu6ap2mdu
 
 devDependencies:
@@ -1629,8 +1629,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@urql/core/3.1.1_graphql@16.6.0:
-    resolution: {integrity: sha512-Mnxtq4I4QeFJsgs7Iytw+HyhiGxISR6qtyk66c9tipozLZ6QVxrCiUPF2HY4BxNIabaxcp+rivadvm8NAnXj4Q==}
+  /@urql/core/3.2.1_graphql@16.6.0:
+    resolution: {integrity: sha512-vQ54pChHadfa/h3qpaMMhJSrfOhf819mmqJpuhOik9eW7KX4eqm1AaoaMLtTDArDqVsPaT306oWQKgtpI2N4mA==}
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
@@ -5678,13 +5678,13 @@ packages:
     resolution: {integrity: sha512-DOE84vZT2fEcl9gqCUTcnAw5ZY5Id55ikUcziSUntuEFL3pRvavg5kwDmTEUJkeCHInTlV/HexFomgYnzO5kdQ==}
     dev: true
 
-  /urql/3.0.3_onqnqwb3ubg5opvemcqf7c2qhy:
-    resolution: {integrity: sha512-aVUAMRLdc5AOk239DxgXt6ZxTl/fEmjr7oyU5OGo8uvpqu42FkeJErzd2qBzhAQ3DyusoZIbqbBLPlnKo/yy2A==}
+  /urql/3.0.4_onqnqwb3ubg5opvemcqf7c2qhy:
+    resolution: {integrity: sha512-okmQKQ9pF4t8O8iCC5gH9acqfFji5lkhW3nLBjx8WKDd2zZG7PXoUpUK19VQEMK87L6VFBOO/XZ52MMKFEI0AA==}
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
       react: '>= 16.8.0'
     dependencies:
-      '@urql/core': 3.1.1_graphql@16.6.0
+      '@urql/core': 3.2.1_graphql@16.6.0
       graphql: 16.6.0
       react: 18.2.0
       wonka: 6.1.2
