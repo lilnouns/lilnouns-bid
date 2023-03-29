@@ -15,9 +15,8 @@ const nextConfig = {
     if (!dev) {
       const MangleCssClassPlugin = require('mangle-css-class-webpack-plugin');
       config.plugins.push(new MangleCssClassPlugin({
-        classNameRegExp: '((hover|focus|xs|md|sm|lg|xl)[\\\\]*:)*-?tw-[a-z_-][a-zA-Z0-9_-]*',
-        ignorePrefixRegExp: '((hover|focus|xs|md|sm|lg|xl)[\\\\]*:)*',
-        log: true,
+        classNameRegExp: '(([a-zA-Z-:]*)[\\\\\\\\]*:)*([\\\\\\\\]*!)?-?tw-[a-zA-Z-]([a-zA-Z0-9-]*([\\\\\\\\]*(\\%|\\#|\\.|\\[|\\]|\\/))*)*',
+        log: process.env.NODE_ENV === 'development',
         classGenerator: (original, opts, context) => {
           if (classNames[original]) {
             return classNames[original];
