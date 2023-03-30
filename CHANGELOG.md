@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.10] - 2023-03-30
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump tailwindcss from 3.2.7 to 3.3.0 
+- Bump typescript from 4.9.5 to 5.0.2 
+- Bump ethers from 5.7.2 to 6.2.3 
+- Bump next-sitemap from 3.1.55 to 4.0.6 
+- Bump @types/node from 18.14.4 to 18.15.11 
+- Bump wrangler from 2.12.0 to 2.13.0 
+- Bump eslint from 8.35.0 to 8.37.0 
+- Bump @types/react from 18.0.28 to 18.0.31 
+
 ## [1.1.9] - 2023-03-29
 
 ### <!-- 07 -->Continuous Integrations
