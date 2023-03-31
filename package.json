@@ -41,7 +41,7 @@
     "eslint-config-next": "13.2.4",
     "incstr": "1.2.3",
     "mangle-css-class-webpack-plugin": "5.0.9",
-    "typescript": "5.0.2",
+    "typescript": "5.0.3",
     "wrangler": "2.13.0"
   }
 }
