@@ -42,6 +42,6 @@
     "incstr": "1.2.3",
     "mangle-css-class-webpack-plugin": "5.0.9",
     "typescript": "5.0.4",
-    "wrangler": "2.15.0"
+    "wrangler": "2.15.1"
   }
 }
