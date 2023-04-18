@@ -85,8 +85,8 @@ devDependencies:
     specifier: 5.0.4
     version: 5.0.4
   wrangler:
-    specifier: 2.15.1
-    version: 2.15.1
+    specifier: 2.16.0
+    version: 2.16.0
 
 packages:
 
@@ -6492,8 +6492,8 @@ packages:
     resolution: {integrity: sha512-ILEIE97kDZvF9Wb9f6h5aXK4swSlKGUcOEGiIYb2OOu/IrDU9iwj0fD//SsA6E5ibwJxpEvhullJY4Sl4GcpAw==}
     dev: false
 
-  /wrangler@2.15.1:
-    resolution: {integrity: sha512-nGcvyE6rStlPFiK8Uz2sB+Z6DyaVfThLYvKa6LfCsM5rN1C/3+flb3qp3DeEkFs09lLdSW0nAeaZavGkZSczvA==}
+  /wrangler@2.16.0:
+    resolution: {integrity: sha512-jhkOmEAF7jH58VvnGx7Uqjs2u2T17e/5r9W3OsqESyBjc/8ALUYuwqQ2gr8JsXFny/cE0ysJas0fdY9wggWMCw==}
     engines: {node: '>=16.13.0'}
     hasBin: true
     dependencies:
