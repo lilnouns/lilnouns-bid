@@ -16,6 +16,8 @@ const infuraApiKey = process.env.NEXT_PUBLIC_INFURA_API_KEY as string;
 
 const graphQlApiUrl = process.env.NEXT_PUBLIC_GRAPHQL_API_URL as string;
 
+const walletConnectProjectId = process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID as string;
+
 const {chains, provider, webSocketProvider} = configureChains(defaultChains, [
   infuraProvider({
     apiKey: infuraApiKey,
@@ -24,6 +26,7 @@ const {chains, provider, webSocketProvider} = configureChains(defaultChains, [
 
 const {connectors} = getDefaultWallets({
   appName: 'Lil Nouns Bid',
+  projectId: walletConnectProjectId,
   chains
 });
 
