@@ -12,7 +12,7 @@ updates:
       - "nekofar"
     # Include a list of updated dependencies
     commit-message:
-      prefix: "ci" 
+      prefix: "ci"
       include: "scope"
     # Specify labels for pull requests
     labels:
@@ -49,4 +49,9 @@ updates:
       - "nekofar"
     # Raise pull requests against the `develop` branch
     target-branch: "develop"
+    # Specifying dependencies and versions to ignore
+    ignore:
+      - dependency-name: "ethers"
+        update-types:
+          - major
 
