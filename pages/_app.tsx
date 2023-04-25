@@ -9,13 +9,13 @@ import {getDefaultWallets, RainbowKitProvider} from "@rainbow-me/rainbowkit";
 import {createClient as urqlCreatClient, Provider as UrqlProvider} from 'urql';
 import {goerli, mainnet} from 'wagmi/chains'
 
-const chainConfig = process.env.NODE_ENV === 'development' ? [goerli] : [mainnet];
+const defaultChains = [mainnet, goerli]
 
 const infuraApiKey = process.env.NEXT_PUBLIC_INFURA_API_KEY!;
 
 const graphQlApiUrl = process.env.NEXT_PUBLIC_GRAPHQL_API_URL!;
 
-const {chains, provider, webSocketProvider} = configureChains(chainConfig, [
+const {chains, provider, webSocketProvider} = configureChains(defaultChains, [
   infuraProvider({
     apiKey: infuraApiKey,
   })
