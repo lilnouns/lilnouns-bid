@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from 'react'
 
 export const useIsMounted = () => {
   const [mounted, setMounted] = useState(false)
@@ -6,5 +6,4 @@ export const useIsMounted = () => {
   useEffect(() => setMounted(true), [])
 
   return mounted
-};
-
+}
