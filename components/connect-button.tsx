@@ -1,68 +1,67 @@
-import {ConnectButton as Connect} from "@rainbow-me/rainbowkit";
+import { ConnectButton as Connect } from '@rainbow-me/rainbowkit'
 
-type Props = {};
+type Props = {}
 
 export const ConnectButton = ({}: Props) => {
   return (
     <>
       <Connect.Custom>
         {({
-            account,
-            chain,
-            openAccountModal,
-            openChainModal,
-            openConnectModal,
-            authenticationStatus,
-            mounted,
-          }) => {
+          account,
+          chain,
+          openAccountModal,
+          openChainModal,
+          openConnectModal,
+          authenticationStatus,
+          mounted,
+        }) => {
           // Note: If your app doesn't use authentication, you
           // can remove all 'authenticationStatus' checks
-          const ready = mounted && authenticationStatus !== 'loading';
+          const ready = mounted && authenticationStatus !== 'loading'
           const connected =
             ready &&
             account &&
             chain &&
-            (!authenticationStatus ||
-              authenticationStatus === 'authenticated');
+            (!authenticationStatus || authenticationStatus === 'authenticated')
 
           return (
             <span
-              className="tw-inline-flex tw-rounded-md tw-shadow tw-cursor-pointer"
+              className="tw-inline-flex tw-cursor-pointer tw-rounded-md tw-shadow"
               {...(!ready && {
                 'aria-hidden': true,
-                'style': {
+                style: {
                   opacity: 0,
                   pointerEvents: 'none',
                   userSelect: 'none',
                 },
               })}
             >
-                {(() => {
-                  if (!connected) {
-                    return (
-                      <a
-                        onClick={openConnectModal}
-                        className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 border tw-border-transparent tw-text-base tw-font-medium tw-rounded-md tw-text-neutral-600 tw-bg-white tw-hover:bg-gray-50"
-                      >
-                        Log in
-                      </a>
-                    );
-                  }
-
-                  if (chain.unsupported) {
-                    return (
-                      <a
-                        onClick={openChainModal}
-                        className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-text-base tw-font-medium tw-rounded-md tw-text-neutral-600 tw-bg-white hover:tw-bg-gray-50"
-                      >
-                        Wrong network
-                      </a>
-                    );
-                  }
-
+              {(() => {
+                if (!connected) {
                   return (
-                    <>
-                      {/*<a
+                    <a
+                      onClick={openConnectModal}
+                      className="border tw-hover:bg-gray-50 tw-inline-flex tw-items-center tw-rounded-md tw-border-transparent tw-bg-white tw-px-4 tw-py-2 tw-text-base tw-font-medium tw-text-neutral-600"
+                    >
+                      Log in
+                    </a>
+                  )
+                }
+
+                if (chain.unsupported) {
+                  return (
+                    <a
+                      onClick={openChainModal}
+                      className="tw-inline-flex tw-items-center tw-rounded-md tw-border tw-border-transparent tw-bg-white tw-px-4 tw-py-2 tw-text-base tw-font-medium tw-text-neutral-600 hover:tw-bg-gray-50"
+                    >
+                      Wrong network
+                    </a>
+                  )
+                }
+
+                return (
+                  <>
+                    {/*<a
                         onClick={openChainModal}
                         className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-text-base tw-font-medium tw-rounded-md tw-text-neutral-600 tw-bg-white hover:tw-bg-gray-50"
                       >
@@ -89,22 +88,22 @@ export const ConnectButton = ({}: Props) => {
                         {chain.name}
                       </a>*/}
 
-                      <a
-                        onClick={openAccountModal}
-                        className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-text-base tw-font-medium tw-rounded-md tw-text-neutral-600 tw-bg-white hover:tw-bg-gray-50"
-                      >
-                        {account.displayName}
-                        {account.displayBalance
-                          ? ` (${account.displayBalance})`
-                          : ''}
-                      </a>
-                    </>
-                  );
-                })()}
-              </span>
-          );
+                    <a
+                      onClick={openAccountModal}
+                      className="tw-inline-flex tw-items-center tw-rounded-md tw-border tw-border-transparent tw-bg-white tw-px-4 tw-py-2 tw-text-base tw-font-medium tw-text-neutral-600 hover:tw-bg-gray-50"
+                    >
+                      {account.displayName}
+                      {account.displayBalance
+                        ? ` (${account.displayBalance})`
+                        : ''}
+                    </a>
+                  </>
+                )
+              })()}
+            </span>
+          )
         }}
       </Connect.Custom>
     </>
-  );
-};
+  )
+}
