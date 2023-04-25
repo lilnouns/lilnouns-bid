@@ -1,6 +1,6 @@
-import {useEffect, useMemo, useState} from "react";
-import tokenContract from '../json/lilnouns-token.json'
+import { useEffect, useMemo, useState } from 'react'
 import auctionContract from '../json/lilnouns-auction.json'
+import tokenContract from '../json/lilnouns-token.json'
 
 export const useContractAbi = (contract: string) => {
   const [contractAbi, setContractAbi] = useState<readonly {}[]>([])
@@ -14,4 +14,4 @@ export const useContractAbi = (contract: string) => {
   }, [contract])
 
   return useMemo(() => contractAbi, [contractAbi])
-};
+}

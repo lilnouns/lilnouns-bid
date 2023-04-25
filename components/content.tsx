@@ -1,15 +1,15 @@
-import {Auction, ContentHero} from "./";
+import { Auction, ContentHero } from './'
 
-type Props = {};
+type Props = {}
 
 export const Content = ({}: Props) => {
   return (
-    <main className="tw-mt-16 tw-mx-auto tw-max-w-5xl tw-px-4 sm:tw-mt-24 tw-min-h-screen">
-      <ContentHero/>
+    <main className="tw-mx-auto tw-mt-16 tw-min-h-screen tw-max-w-5xl tw-px-4 sm:tw-mt-24">
+      <ContentHero />
 
       <section>
         <Auction />
       </section>
     </main>
   )
-};
+}

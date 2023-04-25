@@ -7,12 +7,12 @@ export const onRequest: PagesFunction = async (context) => {
     next, // used for middleware or to fetch assets
     data, // arbitrary space for passing data between middlewares
   } = context
-  const url = new URL(request.url);
+  const url = new URL(request.url)
 
   url.protocol = 'https:'
-  url.hostname = 'api.lilnouns.dev';
-  url.pathname = url.pathname.slice(4);
-  url.port = '443';
+  url.hostname = 'api.lilnouns.dev'
+  url.pathname = url.pathname.slice(4)
+  url.port = '443'
 
-  return fetch(url.toString(), request);
-};
+  return fetch(url.toString(), request)
+}

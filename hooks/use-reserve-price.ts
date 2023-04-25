@@ -1,21 +1,19 @@
-import {useContractRead} from "wagmi";
-import abi from "../json/lilnouns-auction.json";
-import {useMemo} from "react";
-import {BigNumber} from "ethers";
+import { BigNumber } from 'ethers'
+import { useMemo } from 'react'
+import { Address, useContractRead } from 'wagmi'
+import abi from '../json/lilnouns-auction.json'
 
 export type ReservePriceResult = ReturnType<typeof useContractRead> & {
   data?: BigNumber
 }
 
 export const useReservePrice = () => {
-  const address = process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT ?? '';
-
   const result = useContractRead({
-    address,
+    address: process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT as Address,
     abi,
     functionName: 'reservePrice',
     watch: false,
-  }) as ReservePriceResult;
+  }) as ReservePriceResult
 
   return useMemo(() => result.data ?? BigNumber.from(0), [result])
 }
