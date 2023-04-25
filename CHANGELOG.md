@@ -2,6 +2,65 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2023-04-25
+
+### <!-- 01 -->Features
+
+- Install and config `prettier` for code formatting
+
+### <!-- 02 -->Bug Fixes
+
+- Solve contract address type issues over components and hooks
+- Replace `chainConfig` by `defaultChains` on configs
+
+### <!-- 04 -->Refactor
+
+- Replace `UrqlProvider` by `withUrqlClient`
+- Add `projectId` for `getDefaultWallets`
+- Reorganize scripts in package file
+
+### <!-- 05 -->Documentation
+
+- Migrate to new github issue templates
+
+### <!-- 07 -->Continuous Integrations
+
+- Bump actions/checkout from 3.5.0 to 3.5.2 
+- Bump `pnpm` version from 7 to 8 on `pnpm` workflow
+- Ignore `major` upgrades for `ethers` on `dependabot`
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump wrangler from 2.13.0 to 2.14.0 
+- Bump @types/react from 18.0.32 to 18.0.33 
+- Bump next from 13.2.4 to 13.3.0 
+- Bump eslint-config-next from 13.2.4 to 13.3.0 
+- Bump ethers from 5.7.2 to 6.3.0 
+- Bump wrangler from 2.14.0 to 2.15.0 
+- Bump next-sitemap from 4.0.6 to 4.0.7 
+- Bump typescript from 5.0.3 to 5.0.4 
+- Bump eslint from 8.37.0 to 8.38.0 
+- Bump @types/react from 18.0.33 to 18.0.35 
+- Bump wagmi from 0.9.6 to 0.11.3 
+- Bump @headlessui/react from 1.7.13 to 1.7.14 
+- Bump @rainbow-me/rainbowkit from 0.9.0 to 0.12.8 
+- Bump wrangler from 2.15.0 to 2.15.1 
+- Bump wrangler from 2.15.1 to 2.16.0 
+- Bump @types/react from 18.0.35 to 18.0.37 
+- Bump postcss from 8.4.21 to 8.4.22 
+- Bump postcss from 8.4.22 to 8.4.23 
+- Bump @rainbow-me/rainbowkit from 0.12.8 to 0.12.9 
+- Bump @types/node from 18.15.11 to 18.15.12 
+- Bump @types/node from 18.15.12 to 18.15.13 
+- Bump eslint from 8.38.0 to 8.39.0 
+- Bump wrangler from 2.16.0 to 2.17.0 
+- Bump @types/react from 18.0.37 to 18.0.38 
+- Bump eslint-config-next from 13.3.0 to 13.3.1 
+- Bump next from 13.3.0 to 13.3.1 
+- Bump @types/node from 18.15.13 to 18.16.0 
+- Install `next-urql` as a dependency
+- Bump wagmi from 0.11.3 to 0.12.12
+
 ## [1.1.13] - 2023-04-03
 
 ### <!-- 08 -->Miscellaneous Tasks
