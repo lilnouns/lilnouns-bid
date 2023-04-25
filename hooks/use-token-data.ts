@@ -14,7 +14,7 @@ export type DataUriResult = ReturnType<typeof useContractRead> & {
 
 export const useTokenData = (tokenId: number) => {
   const result = useContractRead({
-    address: process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT as Address,
+    address: process.env.NEXT_PUBLIC_LILNOUNS_TOKEN_CONTRACT as Address,
     abi,
     functionName: 'dataURI',
     args: [tokenId],
