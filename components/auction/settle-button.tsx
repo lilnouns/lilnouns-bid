@@ -1,5 +1,5 @@
 import {MouseEvent, useEffect, useState} from "react";
-import {useAccount, useContractWrite, usePrepareContractWrite} from "wagmi";
+import {Address, useAccount, useContractWrite, usePrepareContractWrite} from "wagmi";
 import abi from "../../json/lilnouns-auction.json";
 import clsx from "clsx";
 
@@ -14,11 +14,11 @@ export function SettleButton() {
   }, [isDisconnected]);
 
   const {config} = usePrepareContractWrite({
-    address: process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT ?? '',
+    address: process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT as Address,
     abi,
     functionName: 'settleCurrentAndCreateNewAuction',
   })
-  const {data, isLoading, isSuccess, write} = useContractWrite(config)
+  const {write} = useContractWrite(config)
 
   const buttonHandler = (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();

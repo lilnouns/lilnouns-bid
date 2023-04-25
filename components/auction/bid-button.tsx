@@ -1,5 +1,5 @@
 import {MouseEvent, useEffect, useState} from "react";
-import {useAccount, useContractWrite, usePrepareContractWrite} from "wagmi";
+import {Address, useAccount, useContractWrite, usePrepareContractWrite} from "wagmi";
 import abi from "../../json/lilnouns-auction.json";
 import {BigNumber} from "ethers";
 import clsx from "clsx";
@@ -20,13 +20,13 @@ export function BidButton({nounId, amount}: Props) {
   }, [isDisconnected])
 
   const {config} = usePrepareContractWrite({
-    address: process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT ?? '',
+    address: process.env.NEXT_PUBLIC_LILNOUNS_AUCTION_CONTRACT as Address,
     abi,
     functionName: 'createBid',
     args: [nounId],
     overrides: {value: amount},
   })
-  const {data, isLoading, isSuccess, write} = useContractWrite(config)
+  const {write} = useContractWrite(config)
 
   const buttonHandler = (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
