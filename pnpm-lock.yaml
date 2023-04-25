@@ -85,8 +85,8 @@ devDependencies:
     specifier: 5.0.4
     version: 5.0.4
   wrangler:
-    specifier: 2.16.0
-    version: 2.16.0
+    specifier: 2.17.0
+    version: 2.17.0
 
 packages:
 
@@ -4801,17 +4801,10 @@ packages:
     hasBin: true
     dev: false
 
-  /nanoid@3.3.4:
-    resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
-    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-    dev: true
-
   /nanoid@3.3.6:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
-    dev: false
 
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
@@ -6499,8 +6492,8 @@ packages:
     resolution: {integrity: sha512-ILEIE97kDZvF9Wb9f6h5aXK4swSlKGUcOEGiIYb2OOu/IrDU9iwj0fD//SsA6E5ibwJxpEvhullJY4Sl4GcpAw==}
     dev: false
 
-  /wrangler@2.16.0:
-    resolution: {integrity: sha512-jhkOmEAF7jH58VvnGx7Uqjs2u2T17e/5r9W3OsqESyBjc/8ALUYuwqQ2gr8JsXFny/cE0ysJas0fdY9wggWMCw==}
+  /wrangler@2.17.0:
+    resolution: {integrity: sha512-ucmVHP5BAUVyC/18hReEKgxGSgU0EOxGd+ElHRHVBeGH6LPcsOoC1TolTaDYYnbOuZMbYmHAR5OH1agayr3kZg==}
     engines: {node: '>=16.13.0'}
     hasBin: true
     dependencies:
@@ -6514,7 +6507,7 @@ packages:
       chokidar: 3.5.3
       esbuild: 0.16.3
       miniflare: 2.13.0
-      nanoid: 3.3.4
+      nanoid: 3.3.6
       path-to-regexp: 6.2.1
       selfsigned: 2.1.1
       source-map: 0.7.4
