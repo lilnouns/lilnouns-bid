@@ -5,11 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap",
-    "prestart": "npm run export",
+    "postbuild": "npm run export",
+    "prestart": "npm run build",
     "start": "wrangler pages dev out",
     "lint": "next lint",
-    "preexport": "npm run build",
+    "preexport": "next-sitemap",
     "export": "next export"
   },
   "dependencies": {
