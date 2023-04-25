@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1] - 2023-04-25
+
+### <!-- 02 -->Bug Fixes
+
+- Replace contract address on `useTokenData`
+
 ## [1.2.0] - 2023-04-25
 
 ### <!-- 01 -->Features
