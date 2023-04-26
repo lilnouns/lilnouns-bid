@@ -1,7 +1,7 @@
-import type {NextPage} from "next";
-import Head from "next/head";
-import {Content, Footer, Header} from "../components";
-import {useIsMounted} from "../hooks";
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import { Content, Footer, Header } from '../components'
+import { useIsMounted } from '../hooks'
 
 const Home: NextPage = () => {
   const isMounted = useIsMounted()
@@ -11,15 +11,21 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Lil Nouns Bid</title>
-        <meta name="description" content="Bid faster and more efficient for bidding on auction." />
+        <meta
+          name="description"
+          content="Bid faster and more efficient for bidding on auction."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="tw-relative tw-bg-gray-50 tw-overflow-hidden">
-        <div className="tw-hidden sm:tw-block sm:tw-absolute sm:tw-inset-y-0 sm:tw-h-full sm:tw-w-full" aria-hidden="true">
-          <div className="tw-relative tw-h-full tw-max-w-7xl tw-mx-auto">
+      <div className="tw-relative tw-overflow-hidden tw-bg-gray-50">
+        <div
+          className="tw-hidden sm:tw-absolute sm:tw-inset-y-0 sm:tw-block sm:tw-h-full sm:tw-w-full"
+          aria-hidden="true"
+        >
+          <div className="tw-relative tw-mx-auto tw-h-full tw-max-w-7xl">
             <svg
-              className="tw-absolute tw-right-full tw-transform tw-translate-y-1/4 tw-translate-x-1/4 lg:tw-translate-x-1/2"
+              className="tw-absolute tw-right-full tw-translate-x-1/4 tw-translate-y-1/4 tw-transform lg:tw-translate-x-1/2"
               width={404}
               height={784}
               fill="none"
@@ -34,13 +40,24 @@ const Home: NextPage = () => {
                   height={20}
                   patternUnits="userSpaceOnUse"
                 >
-                  <rect x={0} y={0} width={4} height={4} className="tw-text-gray-200" fill="currentColor" />
+                  <rect
+                    x={0}
+                    y={0}
+                    width={4}
+                    height={4}
+                    className="tw-text-gray-200"
+                    fill="currentColor"
+                  />
                 </pattern>
               </defs>
-              <rect width={404} height={784} fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
+              <rect
+                width={404}
+                height={784}
+                fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
+              />
             </svg>
             <svg
-              className="tw-absolute tw-left-full tw-transform -tw-translate-y-3/4 -tw-translate-x-1/4 md:-tw-translate-y-1/2 lg:-tw-translate-x-1/2"
+              className="tw-absolute tw-left-full -tw-translate-x-1/4 -tw-translate-y-3/4 tw-transform md:-tw-translate-y-1/2 lg:-tw-translate-x-1/2"
               width={404}
               height={784}
               fill="none"
@@ -55,15 +72,26 @@ const Home: NextPage = () => {
                   height={20}
                   patternUnits="userSpaceOnUse"
                 >
-                  <rect x={0} y={0} width={4} height={4} className="tw-text-gray-200" fill="currentColor" />
+                  <rect
+                    x={0}
+                    y={0}
+                    width={4}
+                    height={4}
+                    className="tw-text-gray-200"
+                    fill="currentColor"
+                  />
                 </pattern>
               </defs>
-              <rect width={404} height={784} fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)" />
+              <rect
+                width={404}
+                height={784}
+                fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)"
+              />
             </svg>
           </div>
         </div>
 
-        <div className="tw-relative pt-6">
+        <div className="pt-6 tw-relative">
           <Header />
 
           <Content />
@@ -72,7 +100,7 @@ const Home: NextPage = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

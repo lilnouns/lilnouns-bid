@@ -1,7 +1,7 @@
-import {Address, useContractRead} from "wagmi";
-import abi from "../json/lilnouns-auction.json";
-import {useMemo} from "react";
-import {BigNumber} from "ethers";
+import { BigNumber } from 'ethers'
+import { useMemo } from 'react'
+import { Address, useContractRead } from 'wagmi'
+import abi from '../json/lilnouns-auction.json'
 
 export type ReservePriceResult = ReturnType<typeof useContractRead> & {
   data?: BigNumber
@@ -13,7 +13,7 @@ export const useReservePrice = () => {
     abi,
     functionName: 'reservePrice',
     watch: false,
-  }) as ReservePriceResult;
+  }) as ReservePriceResult
 
   return useMemo(() => result.data ?? BigNumber.from(0), [result])
 }
