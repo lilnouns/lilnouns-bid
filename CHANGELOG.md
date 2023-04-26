@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.2] - 2023-04-26
+
+### <!-- 07 -->Continuous Integrations
+
+- Solve an issue on build project in `build` workflow
+
 ## [1.2.1] - 2023-04-25
 
 ### <!-- 02 -->Bug Fixes
