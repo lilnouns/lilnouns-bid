@@ -32,7 +32,7 @@ jobs:
         name: Install pnpm
         id: pnpm-install
         with:
-          version: ^7
+          version: ^8
           run_install: false
 
       - name: Get pnpm store directory
@@ -55,6 +55,6 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build & export the app
-        run: pnpm run export
+        run: pnpm run build
         env:
           NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL  }}
