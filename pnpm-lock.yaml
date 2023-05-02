@@ -36,7 +36,7 @@ dependencies:
     version: 4.0.7(@next/env@13.3.1)(next@13.3.1)
   next-urql:
     specifier: 5.0.1
-    version: 5.0.1(react@18.2.0)(urql@4.0.0)
+    version: 5.0.1(react@18.2.0)(urql@4.0.2)
   postcss:
     specifier: 8.4.23
     version: 8.4.23
@@ -56,16 +56,16 @@ dependencies:
     specifier: 0.1.1
     version: 0.1.1(react@18.2.0)
   urql:
-    specifier: 4.0.0
-    version: 4.0.0(graphql@16.6.0)(react@18.2.0)
+    specifier: 4.0.2
+    version: 4.0.2(graphql@16.6.0)(react@18.2.0)
   wagmi:
     specifier: 0.12.12
     version: 0.12.12(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.4)
 
 devDependencies:
   '@types/node':
-    specifier: 18.16.0
-    version: 18.16.0
+    specifier: 18.16.2
+    version: 18.16.2
   '@types/react':
     specifier: 18.2.0
     version: 18.2.0
@@ -76,8 +76,8 @@ devDependencies:
     specifier: 8.39.0
     version: 8.39.0
   eslint-config-next:
-    specifier: 13.3.1
-    version: 13.3.1(eslint@8.39.0)(typescript@5.0.4)
+    specifier: 13.3.4
+    version: 13.3.4(eslint@8.39.0)(typescript@5.0.4)
   eslint-config-prettier:
     specifier: 8.8.0
     version: 8.8.0(eslint@8.39.0)
@@ -1118,8 +1118,8 @@ packages:
     resolution: {integrity: sha512-EDtCoedIZC7JlUQ3uaQpSc4aVmyhbLHmQVALg7pFfQgOTjgSnn7mKtA0DiCMkYvvsx6aFb5octGMtWrOtGXW9A==}
     dev: false
 
-  /@next/eslint-plugin-next@13.3.1:
-    resolution: {integrity: sha512-Hpd74UrYGF+bq9bBSRDXRsRfaWkPpcwjhvachy3sr/R/5fY6feC0T0s047pUthyqcaeNsqKOY1nUGQQJNm4WyA==}
+  /@next/eslint-plugin-next@13.3.4:
+    resolution: {integrity: sha512-mvS+HafOPy31oJbAi920WJXMdjbyb4v5FAMr9PeGZfRIdEcsLkA3mU/ZvmwzovJgP3nAWw2e2yM8iIFW8VpvIA==}
     dependencies:
       glob: 7.1.7
     dev: true
@@ -1521,13 +1521,13 @@ packages:
   /@types/better-sqlite3@7.6.3:
     resolution: {integrity: sha512-YS64N9SNDT/NAvou3QNdzAu3E2om/W/0dhORimtPGLef+zSK5l1vDzfsWb4xgXOgfhtOI5ZDTRxnvRPb22AIVQ==}
     dependencies:
-      '@types/node': 18.16.0
+      '@types/node': 18.16.2
     dev: true
 
   /@types/connect@3.4.35:
     resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==}
     dependencies:
-      '@types/node': 18.16.0
+      '@types/node': 18.16.2
     dev: false
 
   /@types/debug@4.1.7:
@@ -1552,8 +1552,8 @@ packages:
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
     dev: false
 
-  /@types/node@18.16.0:
-    resolution: {integrity: sha512-BsAaKhB+7X+H4GnSjGhJG9Qi8Tw+inU9nJDwmD5CgOmBLEI6ArdhikpLX7DjbjDRDTbqZzU2LSQNZg8WGPiSZQ==}
+  /@types/node@18.16.2:
+    resolution: {integrity: sha512-GQW/JL/5Fz/0I8RpeBG9lKp0+aNcXEaVL71c0D2Q0QHDTFvlYKT7an0onCUXj85anv7b4/WesqdfchLc0jtsCg==}
 
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
@@ -1585,7 +1585,7 @@ packages:
   /@types/ws@7.4.7:
     resolution: {integrity: sha512-JQbbmxZTZehdc2iszGKs5oC3NFnjeay7mtAWrdt7qNtAVK0g19muApzAy4bm9byz79xa2ZnO/BOBC2R8RC5Lww==}
     dependencies:
-      '@types/node': 18.16.0
+      '@types/node': 18.16.2
     dev: false
 
   /@typescript-eslint/parser@5.48.0(eslint@8.39.0)(typescript@5.0.4):
@@ -1654,7 +1654,7 @@ packages:
     resolution: {integrity: sha512-13figZkXYD8QHTCY/MTWnzbK958I6Owx6sOm1+tZo5aR9HEnOKFVI0hJZZkzW/JIdiGnXW//YyTrp4ce+LWtbg==}
     dependencies:
       '@0no-co/graphql.web': 1.0.0(graphql@16.6.0)
-      wonka: 6.3.1
+      wonka: 6.3.2
     transitivePeerDependencies:
       - graphql
     dev: false
@@ -2932,8 +2932,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-next@13.3.1(eslint@8.39.0)(typescript@5.0.4):
-    resolution: {integrity: sha512-DieA5djybeE3Q0IqnDXihmhgRSp44x1ywWBBpVRA9pSx+m5Icj8hFclx7ffXlAvb9MMLN6cgj/hqJ4lka/QmvA==}
+  /eslint-config-next@13.3.4(eslint@8.39.0)(typescript@5.0.4):
+    resolution: {integrity: sha512-TknEcP+EdTqLvJ2zMY1KnWqcx8ZHl1C2Tjjbq3qmtWcHRU5oxe1PAsz3vrKG3NOzonSaPcB2SpCSfYqcgj6nfA==}
     peerDependencies:
       eslint: ^7.23.0 || ^8.0.0
       typescript: '>=3.3.1'
@@ -2941,7 +2941,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@next/eslint-plugin-next': 13.3.1
+      '@next/eslint-plugin-next': 13.3.4
       '@rushstack/eslint-patch': 1.2.0
       '@typescript-eslint/parser': 5.48.0(eslint@8.39.0)(typescript@5.0.4)
       eslint: 8.39.0
@@ -4286,7 +4286,7 @@ packages:
       next: 13.3.1(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /next-urql@5.0.1(react@18.2.0)(urql@4.0.0):
+  /next-urql@5.0.1(react@18.2.0)(urql@4.0.2):
     resolution: {integrity: sha512-JMQmG8S6rbpMUfSVJqCNYhFWAPvb24cR/17D9RkrD7lUgFyokrAd5p1dJcwr7oSQEsqm9QVy/RZB9e4c9ayvGg==}
     peerDependencies:
       react: '>=16.8.0'
@@ -4294,7 +4294,7 @@ packages:
     dependencies:
       react: 18.2.0
       react-ssr-prepass: 1.5.0(react@18.2.0)
-      urql: 4.0.0(graphql@16.6.0)(react@18.2.0)
+      urql: 4.0.2(graphql@16.6.0)(react@18.2.0)
     dev: false
 
   /next@13.3.1(react-dom@18.2.0)(react@18.2.0):
@@ -5681,14 +5681,14 @@ packages:
     resolution: {integrity: sha512-DOE84vZT2fEcl9gqCUTcnAw5ZY5Id55ikUcziSUntuEFL3pRvavg5kwDmTEUJkeCHInTlV/HexFomgYnzO5kdQ==}
     dev: true
 
-  /urql@4.0.0(graphql@16.6.0)(react@18.2.0):
-    resolution: {integrity: sha512-JY+h1rTLThB9lgoasy9TehL/W2yuzhyRazr6TzLB9ST8+Nm9lKKuyuoLvywhSOHdXtz2FJVFFUeJHE3S+ZfaWA==}
+  /urql@4.0.2(graphql@16.6.0)(react@18.2.0):
+    resolution: {integrity: sha512-jMb71UGtoAHI4A0TO15ZUSG8qvUxC5fBTXmUq/DyE3WWcnJkZbnMCBlcZIzMrXK4txAMIHE718jsaUujRkdlkg==}
     peerDependencies:
       react: '>= 16.8.0'
     dependencies:
       '@urql/core': 4.0.3(graphql@16.6.0)
       react: 18.2.0
-      wonka: 6.3.1
+      wonka: 6.3.2
     transitivePeerDependencies:
       - graphql
     dev: false
@@ -5857,8 +5857,8 @@ packages:
       isexe: 2.0.0
     dev: true
 
-  /wonka@6.3.1:
-    resolution: {integrity: sha512-nJyGPcjuBiaLFn8QAlrHd+QjV9AlPO7snOWAhgx6aX0nQLMV6Wi0nqfrkmsXIH0efngbDOroOz2QyLnZMF16Hw==}
+  /wonka@6.3.2:
+    resolution: {integrity: sha512-2xXbQ1LnwNS7egVm1HPhW2FyKrekolzhpM3mCwXdQr55gO+tAiY76rhb32OL9kKsW8taj++iP7C6hxlVzbnvrw==}
     dev: false
 
   /word-wrap@1.2.3:
