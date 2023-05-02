@@ -8,8 +8,8 @@ dependencies:
     specifier: 2.0.17
     version: 2.0.17(react@18.2.0)
   '@rainbow-me/rainbowkit':
-    specifier: 0.12.9
-    version: 0.12.9(@types/react@18.2.0)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(wagmi@0.12.12)
+    specifier: 0.12.12
+    version: 0.12.12(@types/react@18.2.0)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(wagmi@0.12.12)
   autoprefixer:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.23)
@@ -1251,8 +1251,8 @@ packages:
       tslib: 2.4.1
     dev: true
 
-  /@rainbow-me/rainbowkit@0.12.9(@types/react@18.2.0)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(wagmi@0.12.12):
-    resolution: {integrity: sha512-8qm3zNtOUAyxRPm7HsxIQf9NzqHoOJyUtceoHQn0JEU98aYdyVgxMm1lx7cjAvzNwz/kfxEIYm5d5W3c3Hfebw==}
+  /@rainbow-me/rainbowkit@0.12.12(@types/react@18.2.0)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(wagmi@0.12.12):
+    resolution: {integrity: sha512-9PxYjX8Z/FOdYkzJe7BCa1qsr8hsdw8ZIOrQvB5EyolI1mdmKVIsPFTjXx85D6GY8v9P6Ax9elDDT/PdPPhgCw==}
     engines: {node: '>=12.4'}
     peerDependencies:
       ethers: '>=5.5.1'
