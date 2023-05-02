@@ -36,7 +36,7 @@ dependencies:
     version: 4.0.7(@next/env@13.3.1)(next@13.3.1)
   next-urql:
     specifier: 5.0.1
-    version: 5.0.1(react@18.2.0)(urql@4.0.0)
+    version: 5.0.1(react@18.2.0)(urql@4.0.2)
   postcss:
     specifier: 8.4.23
     version: 8.4.23
@@ -56,8 +56,8 @@ dependencies:
     specifier: 0.1.1
     version: 0.1.1(react@18.2.0)
   urql:
-    specifier: 4.0.0
-    version: 4.0.0(graphql@16.6.0)(react@18.2.0)
+    specifier: 4.0.2
+    version: 4.0.2(graphql@16.6.0)(react@18.2.0)
   wagmi:
     specifier: 0.12.12
     version: 0.12.12(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.4)
@@ -1654,7 +1654,7 @@ packages:
     resolution: {integrity: sha512-13figZkXYD8QHTCY/MTWnzbK958I6Owx6sOm1+tZo5aR9HEnOKFVI0hJZZkzW/JIdiGnXW//YyTrp4ce+LWtbg==}
     dependencies:
       '@0no-co/graphql.web': 1.0.0(graphql@16.6.0)
-      wonka: 6.3.1
+      wonka: 6.3.2
     transitivePeerDependencies:
       - graphql
     dev: false
@@ -4286,7 +4286,7 @@ packages:
       next: 13.3.1(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /next-urql@5.0.1(react@18.2.0)(urql@4.0.0):
+  /next-urql@5.0.1(react@18.2.0)(urql@4.0.2):
     resolution: {integrity: sha512-JMQmG8S6rbpMUfSVJqCNYhFWAPvb24cR/17D9RkrD7lUgFyokrAd5p1dJcwr7oSQEsqm9QVy/RZB9e4c9ayvGg==}
     peerDependencies:
       react: '>=16.8.0'
@@ -4294,7 +4294,7 @@ packages:
     dependencies:
       react: 18.2.0
       react-ssr-prepass: 1.5.0(react@18.2.0)
-      urql: 4.0.0(graphql@16.6.0)(react@18.2.0)
+      urql: 4.0.2(graphql@16.6.0)(react@18.2.0)
     dev: false
 
   /next@13.3.1(react-dom@18.2.0)(react@18.2.0):
@@ -5681,14 +5681,14 @@ packages:
     resolution: {integrity: sha512-DOE84vZT2fEcl9gqCUTcnAw5ZY5Id55ikUcziSUntuEFL3pRvavg5kwDmTEUJkeCHInTlV/HexFomgYnzO5kdQ==}
     dev: true
 
-  /urql@4.0.0(graphql@16.6.0)(react@18.2.0):
-    resolution: {integrity: sha512-JY+h1rTLThB9lgoasy9TehL/W2yuzhyRazr6TzLB9ST8+Nm9lKKuyuoLvywhSOHdXtz2FJVFFUeJHE3S+ZfaWA==}
+  /urql@4.0.2(graphql@16.6.0)(react@18.2.0):
+    resolution: {integrity: sha512-jMb71UGtoAHI4A0TO15ZUSG8qvUxC5fBTXmUq/DyE3WWcnJkZbnMCBlcZIzMrXK4txAMIHE718jsaUujRkdlkg==}
     peerDependencies:
       react: '>= 16.8.0'
     dependencies:
       '@urql/core': 4.0.3(graphql@16.6.0)
       react: 18.2.0
-      wonka: 6.3.1
+      wonka: 6.3.2
     transitivePeerDependencies:
       - graphql
     dev: false
@@ -5857,8 +5857,8 @@ packages:
       isexe: 2.0.0
     dev: true
 
-  /wonka@6.3.1:
-    resolution: {integrity: sha512-nJyGPcjuBiaLFn8QAlrHd+QjV9AlPO7snOWAhgx6aX0nQLMV6Wi0nqfrkmsXIH0efngbDOroOz2QyLnZMF16Hw==}
+  /wonka@6.3.2:
+    resolution: {integrity: sha512-2xXbQ1LnwNS7egVm1HPhW2FyKrekolzhpM3mCwXdQr55gO+tAiY76rhb32OL9kKsW8taj++iP7C6hxlVzbnvrw==}
     dev: false
 
   /word-wrap@1.2.3:
