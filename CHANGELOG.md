@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.4] - 2023-05-06
+
+### <!-- 07 -->Continuous Integrations
+
+- Bump orhun/git-cliff-action from 2.0.5 to 2.0.6 
+- Update and improve `pnpm` workflow
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump @types/react from 18.0.38 to 18.2.0 
+- Bump @types/node from 18.16.0 to 18.16.2 
+- Bump next-urql from 5.0.0 to 5.0.1 
+- Bump tailwindcss from 3.3.1 to 3.3.2 
+- Bump eslint-config-next from 13.3.1 to 13.3.4 
+- Bump urql from 4.0.0 to 4.0.2 
+- Bump @rainbow-me/rainbowkit from 0.12.9 to 0.12.12 
+- Bump @types/react from 18.2.0 to 18.2.5 
+- Bump prettier-plugin-tailwindcss from 0.2.7 to 0.2.8 
+- Bump wagmi from 0.12.12 to 0.12.13 
+- Bump eslint-config-next from 13.3.4 to 13.4.1 
+- Bump @types/react-dom from 18.0.11 to 18.2.4 
+- Bump next-sitemap from 4.0.7 to 4.0.9 
+- Bump eslint from 8.39.0 to 8.40.0 
+- Bump @types/react from 18.2.5 to 18.2.6 
+- Bump wrangler from 2.17.0 to 2.19.0 
+- Bump next from 13.3.1 to 13.4.1 
+
 ## [1.2.3] - 2023-04-27
 
 ### <!-- 07 -->Continuous Integrations
