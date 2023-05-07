@@ -37,10 +37,7 @@ jobs:
 
       - name: Commit and push changes to lockfile
         env:
-          COMMIT_MSG: |
-            chore(deps): update the `pnpm` lockfile
-            
-            skip-checks: true
+          COMMIT_MSG: "chore(deps): update the `pnpm` lockfile"
         run: |
           git config --global user.name github-actions[bot]
           git config --global user.email github-actions[bot]@users.noreply.github.com
