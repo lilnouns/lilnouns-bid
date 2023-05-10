@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.5] - 2023-05-10
+
+### <!-- 07 -->Continuous Integrations
+
+- Remove caching from `pnpm` workflow
+- Change `open-pull-requests-limit` from 10 to 20
+- Remove `skip-checks` from `pnpm` workflow
+- Add node version 20 on `build` workflow
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump @types/node from 18.16.2 to 20.1.0 
+- Bump wrangler from 2.19.0 to 2.20.0 
+- Bump @rainbow-me/rainbowkit from 0.12.12 to 0.12.13 
+- Bump @types/node from 20.1.0 to 20.1.1 
+
 ## [1.2.4] - 2023-05-06
 
 ### <!-- 07 -->Continuous Integrations
