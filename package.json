@@ -1,6 +1,6 @@
 {
   "name": "lilnouns-bid",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -15,7 +15,7 @@
   "dependencies": {
     "@headlessui/react": "1.7.14",
     "@heroicons/react": "2.0.17",
-    "@rainbow-me/rainbowkit": "0.12.12",
+    "@rainbow-me/rainbowkit": "0.12.13",
     "autoprefixer": "10.4.14",
     "clsx": "1.2.1",
     "dayjs": "1.11.7",
@@ -35,7 +35,7 @@
     "wagmi": "0.12.13"
   },
   "devDependencies": {
-    "@types/node": "18.16.2",
+    "@types/node": "20.1.1",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "eslint": "8.40.0",
@@ -47,6 +47,6 @@
     "prettier-plugin-organize-imports": "3.2.2",
     "prettier-plugin-tailwindcss": "0.2.8",
     "typescript": "5.0.4",
-    "wrangler": "2.19.0"
+    "wrangler": "2.20.0"
   }
 }
