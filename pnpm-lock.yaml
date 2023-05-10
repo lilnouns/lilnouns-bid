@@ -8,8 +8,8 @@ dependencies:
     specifier: 2.0.17
     version: 2.0.17(react@18.2.0)
   '@rainbow-me/rainbowkit':
-    specifier: 0.12.12
-    version: 0.12.12(@types/react@18.2.6)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(wagmi@0.12.13)
+    specifier: 0.12.13
+    version: 0.12.13(@types/react@18.2.6)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(wagmi@0.12.13)
   autoprefixer:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.23)
@@ -1251,8 +1251,8 @@ packages:
       tslib: 2.4.1
     dev: true
 
-  /@rainbow-me/rainbowkit@0.12.12(@types/react@18.2.6)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(wagmi@0.12.13):
-    resolution: {integrity: sha512-9PxYjX8Z/FOdYkzJe7BCa1qsr8hsdw8ZIOrQvB5EyolI1mdmKVIsPFTjXx85D6GY8v9P6Ax9elDDT/PdPPhgCw==}
+  /@rainbow-me/rainbowkit@0.12.13(@types/react@18.2.6)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(wagmi@0.12.13):
+    resolution: {integrity: sha512-1rZ1j/bawW2HbV3Kh1gRX0Owel8E3RbFTi9ydLv59aHqMiHwGUmuxDOLKdhOPMHm9PgdoR7p0k+jH9fYvEAPYw==}
     engines: {node: '>=12.4'}
     peerDependencies:
       ethers: '>=5.5.1'
@@ -1945,7 +1945,7 @@ packages:
       '@walletconnect/legacy-utils': 2.0.0
       copy-to-clipboard: 3.3.3
       preact: 10.13.2
-      qrcode: 1.5.1
+      qrcode: 1.5.3
     dev: false
 
   /@walletconnect/legacy-provider@2.0.0:
@@ -4819,17 +4819,6 @@ packages:
 
   /qrcode@1.5.0:
     resolution: {integrity: sha512-9MgRpgVc+/+47dFvQeD6U2s0Z92EsKzcHogtum4QB+UNd025WOJSHvn/hjk9xmzj7Stj95CyUAs31mrjxliEsQ==}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
-    dependencies:
-      dijkstrajs: 1.0.2
-      encode-utf8: 1.0.3
-      pngjs: 5.0.0
-      yargs: 15.4.1
-    dev: false
-
-  /qrcode@1.5.1:
-    resolution: {integrity: sha512-nS8NJ1Z3md8uTjKtP+SGGhfqmTCs5flU/xR623oI0JX+Wepz9R8UrRVCTBTJm3qGw3rH6jJ6MUHjkDx15cxSSg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dependencies:
