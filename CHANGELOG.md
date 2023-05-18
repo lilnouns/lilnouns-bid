@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.6] - 2023-05-18
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump @types/node from 20.1.1 to 20.1.2 
+- Bump @heroicons/react from 2.0.17 to 2.0.18 
+- Bump @rainbow-me/rainbowkit from 0.12.13 to 0.12.14 
+- Bump @types/node from 20.1.2 to 20.1.3 
+- Bump eslint-config-next from 13.4.1 to 13.4.2 
+- Bump next from 13.4.1 to 13.4.2 
+- Bump @types/node from 20.1.3 to 20.1.4 
+- Bump @types/node from 20.1.4 to 20.1.5 
+- Bump prettier-plugin-tailwindcss from 0.2.8 to 0.3.0 
+- Bump @types/node from 20.1.5 to 20.1.7 
+
 ## [1.2.5] - 2023-05-10
 
 ### <!-- 07 -->Continuous Integrations
