@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.8] - 2023-06-03
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump next from 13.4.3 to 13.4.4 
+- Bump eslint-config-next from 13.4.3 to 13.4.4 
+- Bump @types/node from 20.2.3 to 20.2.4 
+- Bump @types/node from 20.2.4 to 20.2.5 
+- Bump postcss from 8.4.23 to 8.4.24 
+- Bump urql from 4.0.2 to 4.0.3 
+- Bump @headlessui/react from 1.7.14 to 1.7.15 
+- Bump @types/react from 18.2.7 to 18.2.8 
+- Bump dayjs from 1.11.7 to 1.11.8 
+- Bump typescript from 5.0.4 to 5.1.3 
+
 ## [1.2.7] - 2023-05-26
 
 ### <!-- 08 -->Miscellaneous Tasks
