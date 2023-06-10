@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.9] - 2023-06-10
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump eslint from 8.41.0 to 8.42.0 
+- Bump wrangler from 3.0.1 to 3.1.0 
+- Bump @types/react from 18.2.8 to 18.2.9 
+
 ## [1.2.8] - 2023-06-03
 
 ### <!-- 08 -->Miscellaneous Tasks
