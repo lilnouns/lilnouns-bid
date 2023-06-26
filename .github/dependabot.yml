@@ -53,5 +53,5 @@ updates:
     ignore:
       - dependency-name: "ethers"
         update-types:
-          - major
+          - semver-major
 
