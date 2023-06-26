@@ -42,6 +42,8 @@ jobs:
     name: Publish on the GitHub
     needs: changelog
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Create the GitHub release
         uses: softprops/action-gh-release@v0.1.15
