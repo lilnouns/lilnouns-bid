@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.10] - 2023-06-29
+
+### <!-- 05 -->Documentation
+
+- Add funding to the packge configs
+- Add crypto donate badge to the project readme
+- Set sponsorships configuration for github
+
+### <!-- 07 -->Continuous Integrations
+
+- Bump actions/checkout from 3.5.2 to 3.5.3 
+- Switch `package-ecosystem` from `npm` to `pnpm` for Dependabot
+- Change `package-ecosystem` back to `npm` on Dependabot configs
+- Update the upgrade type of `ethers` dependency to `semver-major`
+- Perform checkout action before building matrix steps on build workflow
+- Optimize node version matrix on build workflow
+- Add workflow concurrency and cancellation
+- Add permissions to release workflow job
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Update `pnpm` lockfile state
+
 ## [1.2.9] - 2023-06-10
 
 ### <!-- 08 -->Miscellaneous Tasks
