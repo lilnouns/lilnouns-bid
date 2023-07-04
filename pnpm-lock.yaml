@@ -39,8 +39,8 @@ dependencies:
     specifier: 4.1.8
     version: 4.1.8(next@13.4.7)
   next-urql:
-    specifier: 5.0.1
-    version: 5.0.1(react@18.2.0)(urql@4.0.4)
+    specifier: 5.0.2
+    version: 5.0.2(react@18.2.0)(urql@4.0.4)
   postcss:
     specifier: 8.4.24
     version: 8.4.24
@@ -4135,8 +4135,8 @@ packages:
       next: 13.4.7(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /next-urql@5.0.1(react@18.2.0)(urql@4.0.4):
-    resolution: {integrity: sha512-JMQmG8S6rbpMUfSVJqCNYhFWAPvb24cR/17D9RkrD7lUgFyokrAd5p1dJcwr7oSQEsqm9QVy/RZB9e4c9ayvGg==}
+  /next-urql@5.0.2(react@18.2.0)(urql@4.0.4):
+    resolution: {integrity: sha512-/ntMdlDNhduT1xmnZ0ZgH9Vtbaz/Gnx5VdTyExHjRqKpKnqZU49vHiik/qctscwFnPBVTRNxQ1BjhrOtfsm8oQ==}
     peerDependencies:
       react: '>=16.8.0'
       urql: ^4.0.0
