@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.11] - 2023-07-04
+
+### <!-- 08 -->Miscellaneous Tasks
+
+- Bump urql from 4.0.3 to 4.0.4 
+- Bump next-seo from 6.0.0 to 6.1.0 
+- Bump eslint-config-next from 13.4.4 to 13.4.7 
+- Bump @types/react-dom from 18.2.4 to 18.2.6 
+- Bump wrangler from 3.1.0 to 3.1.1 
+- Bump next from 13.4.4 to 13.4.7 
+- Bump @types/react from 18.2.9 to 18.2.14 
+- Bump eslint from 8.42.0 to 8.44.0 
+- Bump wagmi from 0.12.13 to 0.12.18 
+- Bump @types/node from 20.2.5 to 20.3.3 
+
 ## [1.2.10] - 2023-06-29
 
 ### <!-- 05 -->Documentation
