@@ -20,7 +20,7 @@
     "clsx": "1.2.1",
     "dayjs": "1.11.8",
     "ethers": "5.7.2",
-    "graphql": "16.6.0",
+    "graphql": "16.7.1",
     "next": "13.4.7",
     "next-seo": "6.1.0",
     "next-sitemap": "4.1.3",
