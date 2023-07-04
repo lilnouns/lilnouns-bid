@@ -12,8 +12,8 @@ dependencies:
     specifier: 2.0.18
     version: 2.0.18(react@18.2.0)
   '@rainbow-me/rainbowkit':
-    specifier: 0.12.14
-    version: 0.12.14(@types/react@18.2.14)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(wagmi@0.12.18)
+    specifier: 0.12.16
+    version: 0.12.16(@types/react@18.2.14)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(wagmi@0.12.18)
   autoprefixer:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.24)
@@ -1097,14 +1097,14 @@ packages:
       tslib: 2.4.1
     dev: true
 
-  /@rainbow-me/rainbowkit@0.12.14(@types/react@18.2.14)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(wagmi@0.12.18):
-    resolution: {integrity: sha512-G7/uYl6TrDS7eiQauc5GEWQ09wCV91hs7xZqj3Af1wsLmbnJM2paUEMs0NI4rbvw0yiMkfoNYMZ2Wfl7NQLKaA==}
+  /@rainbow-me/rainbowkit@0.12.16(@types/react@18.2.14)(ethers@5.7.2)(react-dom@18.2.0)(react@18.2.0)(wagmi@0.12.18):
+    resolution: {integrity: sha512-4uuJIOJaBjPVM/8HqM1kNf2Yqb52lNYkQD1m8p8e7zcIK2K3nml6BfG5r04f4kqUWRmT3yosZOz2+AYL1zFqdA==}
     engines: {node: '>=12.4'}
     peerDependencies:
       ethers: '>=5.6.8'
       react: '>=17'
       react-dom: '>=17'
-      wagmi: 0.12.x
+      wagmi: '>=0.12.18 <1.0.0'
     dependencies:
       '@vanilla-extract/css': 1.9.1
       '@vanilla-extract/dynamic': 2.0.2
